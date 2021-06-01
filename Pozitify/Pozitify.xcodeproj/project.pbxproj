@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		10FAF62DA03D901D9EBFC0C1 /* Pods_Pozitify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04466FDC3A4F0810BE7C0AA /* Pods_Pozitify.framework */; };
+		B93E87502666886600B6B1CC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93E874F2666886600B6B1CC /* Auth.storyboard */; };
 		EAC4053326664D6600BA0D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4053226664D6600BA0D81 /* AppDelegate.swift */; };
 		EAC4053526664D6600BA0D81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4053426664D6600BA0D81 /* SceneDelegate.swift */; };
 		EAC4053726664D6600BA0D81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4053626664D6600BA0D81 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		A44F0AC664F80443DFF380C3 /* Pods-Pozitify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozitify.release.xcconfig"; path = "Target Support Files/Pods-Pozitify/Pods-Pozitify.release.xcconfig"; sourceTree = "<group>"; };
+		B93E874F2666886600B6B1CC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		C04466FDC3A4F0810BE7C0AA /* Pods_Pozitify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pozitify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6818C024A12E161CCF269A /* Pods-Pozitify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozitify.debug.xcconfig"; path = "Target Support Files/Pods-Pozitify/Pods-Pozitify.debug.xcconfig"; sourceTree = "<group>"; };
 		EAC4052F26664D6600BA0D81 /* Pozitify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pozitify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,13 +56,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B93E874E2666884700B6B1CC /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				EAC4053826664D6600BA0D81 /* Main.storyboard */,
+				B93E874F2666886600B6B1CC /* Auth.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		D58403855BD7F3027C583CC1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				DE6818C024A12E161CCF269A /* Pods-Pozitify.debug.xcconfig */,
 				A44F0AC664F80443DFF380C3 /* Pods-Pozitify.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -93,12 +103,12 @@
 		EAC4053126664D6600BA0D81 /* Pozitify */ = {
 			isa = PBXGroup;
 			children = (
+				B93E874E2666884700B6B1CC /* StoryBoards */,
 				EAC4054726664E8200BA0D81 /* Controllers */,
 				EAC4054626664E7B00BA0D81 /* Cells */,
 				EAC4053226664D6600BA0D81 /* AppDelegate.swift */,
 				EAC4053426664D6600BA0D81 /* SceneDelegate.swift */,
 				EAC4053626664D6600BA0D81 /* ViewController.swift */,
-				EAC4053826664D6600BA0D81 /* Main.storyboard */,
 				EAC4053B26664D6800BA0D81 /* Assets.xcassets */,
 				EAC4053D26664D6800BA0D81 /* LaunchScreen.storyboard */,
 				EAC40552266671C700BA0D81 /* GoogleService-Info.plist */,
@@ -185,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93E87502666886600B6B1CC /* Auth.storyboard in Resources */,
 				EAC405512666512200BA0D81 /* TaskTableViewCell.xib in Resources */,
 				EAC4053F26664D6800BA0D81 /* LaunchScreen.storyboard in Resources */,
 				EAC40553266671C700BA0D81 /* GoogleService-Info.plist in Resources */,
