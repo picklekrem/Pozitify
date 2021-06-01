@@ -109,7 +109,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="veq-P3-QVP">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zC3-5F-opM" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" automaticallyAdjustsScrollViewInsets="NO" id="zC3-5F-opM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dfw-Sp-Q9m"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P6U-b0-9rT">

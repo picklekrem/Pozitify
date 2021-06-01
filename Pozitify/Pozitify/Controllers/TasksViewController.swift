@@ -15,7 +15,6 @@ class TasksViewController: UIViewController {
         super.viewDidLoad()
        
         taskTableView.separatorStyle = .none
-//        taskTableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.identifier)
         taskTableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.identifier)
     }
 
