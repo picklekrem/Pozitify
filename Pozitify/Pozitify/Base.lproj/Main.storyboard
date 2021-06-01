@@ -101,7 +101,7 @@
         <scene sceneID="kLL-bz-9Wb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ytu-G2-K9X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tasks" image="face.dashed" catalog="system" selectedImage="face.smiling.fill" id="mT0-ih-SM5"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" image="face.smiling" catalog="system" selectedImage="face.smiling.fill" id="mT0-ih-SM5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Iov-QN-Mdd">
                         <rect key="frame" x="0.0" y="44" width="414" height="101.5"/>
@@ -165,7 +165,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="face.dashed" catalog="system" width="128" height="121"/>
+        <image name="face.smiling" catalog="system" width="128" height="121"/>
         <image name="face.smiling.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
