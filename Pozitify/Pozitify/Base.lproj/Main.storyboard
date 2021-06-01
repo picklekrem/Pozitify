@@ -101,7 +101,7 @@
         <scene sceneID="kLL-bz-9Wb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ytu-G2-K9X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tasks" image="face.dashed" catalog="system" selectedImage="face.smiling.fill" id="mT0-ih-SM5"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" image="neutral-face" selectedImage="happy-face" id="mT0-ih-SM5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Iov-QN-Mdd">
                         <rect key="frame" x="0.0" y="44" width="414" height="101.5"/>
@@ -123,7 +123,7 @@
         <scene sceneID="F8z-3T-VZj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uUN-Ts-8Zh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ideas" id="hFi-ls-zkW"/>
+                    <tabBarItem key="tabBarItem" title="Ideas" image="Love Book" selectedImage="Ball Point Pen" id="hFi-ls-zkW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="9oz-WV-0g2">
                         <rect key="frame" x="0.0" y="44" width="414" height="101.5"/>
@@ -145,7 +145,7 @@
         <scene sceneID="C3Z-tK-Mwc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MTT-F1-FZX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="sEB-fm-RZy"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Head Profile" selectedImage="Head Profile Fill" id="sEB-fm-RZy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="YN6-kM-AyL">
                         <rect key="frame" x="0.0" y="44" width="414" height="101.5"/>
@@ -165,8 +165,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="face.dashed" catalog="system" width="128" height="121"/>
-        <image name="face.smiling.fill" catalog="system" width="128" height="121"/>
+        <image name="Ball Point Pen" width="24" height="24"/>
+        <image name="Head Profile" width="24" height="50"/>
+        <image name="Head Profile Fill" width="24" height="24"/>
+        <image name="Love Book" width="24" height="24"/>
+        <image name="happy-face" width="24" height="24"/>
+        <image name="neutral-face" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
