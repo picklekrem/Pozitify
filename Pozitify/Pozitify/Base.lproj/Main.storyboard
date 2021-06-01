@@ -101,11 +101,7 @@
         <scene sceneID="kLL-bz-9Wb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ytu-G2-K9X" sceneMemberID="viewController">
-<<<<<<< HEAD
-                    <tabBarItem key="tabBarItem" title="Tasks" image="face.smiling" catalog="system" selectedImage="face.smiling.fill" id="mT0-ih-SM5"/>
-=======
                     <tabBarItem key="tabBarItem" title="Tasks" image="neutral-face" selectedImage="happy-face" id="mT0-ih-SM5"/>
->>>>>>> f2ddef0dcb964286a342831879a88dc1609eb6d0
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Iov-QN-Mdd">
                         <rect key="frame" x="0.0" y="44" width="414" height="101.5"/>
@@ -169,17 +165,12 @@
         </scene>
     </scenes>
     <resources>
-<<<<<<< HEAD
-        <image name="face.smiling" catalog="system" width="128" height="121"/>
-        <image name="face.smiling.fill" catalog="system" width="128" height="121"/>
-=======
         <image name="Ball Point Pen" width="24" height="24"/>
         <image name="Head Profile" width="24" height="50"/>
         <image name="Head Profile Fill" width="24" height="24"/>
         <image name="Love Book" width="24" height="24"/>
         <image name="happy-face" width="24" height="24"/>
         <image name="neutral-face" width="24" height="24"/>
->>>>>>> f2ddef0dcb964286a342831879a88dc1609eb6d0
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
