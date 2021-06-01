@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,14 +16,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Zd-xb-QLb">
+                                <rect key="frame" x="35" y="192" width="344" height="290"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Share!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zLn-vd-ymi">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="290"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zLn-vd-ymi" secondAttribute="trailing" id="5Ao-Jk-Acg"/>
+                                    <constraint firstItem="zLn-vd-ymi" firstAttribute="top" secondItem="9Zd-xb-QLb" secondAttribute="top" id="clQ-99-1mx"/>
+                                    <constraint firstAttribute="height" constant="290" id="kgY-EN-n85"/>
+                                    <constraint firstItem="zLn-vd-ymi" firstAttribute="leading" secondItem="9Zd-xb-QLb" secondAttribute="leading" id="t0b-iA-mih"/>
+                                    <constraint firstAttribute="bottom" secondItem="zLn-vd-ymi" secondAttribute="bottom" id="zuR-Cj-MvV"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7l-EM-dMU">
+                                <rect key="frame" x="35" y="557" width="344" height="63"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="344" id="O9p-LN-u4z"/>
+                                    <constraint firstAttribute="height" constant="63" id="j6g-Yj-SQN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <state key="normal" title="Submit!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <color key="backgroundColor" name="MainColor"/>
+                        <constraints>
+                            <constraint firstItem="9Zd-xb-QLb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="7fl-hM-4yc"/>
+                            <constraint firstItem="9Zd-xb-QLb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="RMy-Ui-zlI"/>
+                            <constraint firstItem="O7l-EM-dMU" firstAttribute="top" secondItem="9Zd-xb-QLb" secondAttribute="bottom" constant="75" id="ZF8-M9-0hZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Zd-xb-QLb" secondAttribute="trailing" constant="35" id="ZNi-pI-LTV"/>
+                            <constraint firstItem="O7l-EM-dMU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="eaG-2v-LEO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O7l-EM-dMU" secondAttribute="trailing" constant="35" id="fOQ-Fu-Fcx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ideas" id="JPc-Hv-hJG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="1351"/>
+            <point key="canvasLocation" x="334.78260869565219" y="1350.6696428571429"/>
         </scene>
         <!--Profile-->
         <scene sceneID="KIb-FN-gY6">
@@ -171,11 +214,17 @@
         <image name="Love Book" width="24" height="24"/>
         <image name="happy-face" width="24" height="24"/>
         <image name="neutral-face" width="24" height="24"/>
+        <namedColor name="MainColor">
+            <color red="0.77600002288818359" green="0.92199999094009399" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
