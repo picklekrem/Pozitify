@@ -118,7 +118,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yb0-HU-SeX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MainColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="MgL-L6-BHh"/>
                 </viewController>
@@ -157,7 +157,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OSY-Vf-Bq3">
                                 <rect key="frame" x="0.0" y="145.5" width="414" height="667.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="MainColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="8GN-I9-YE0" id="hSn-3g-N1a"/>
                                     <outlet property="delegate" destination="8GN-I9-YE0" id="IaB-s8-YMN"/>
@@ -165,7 +165,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QiP-7h-FDN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MainColor"/>
                         <constraints>
                             <constraint firstItem="OSY-Vf-Bq3" firstAttribute="top" secondItem="QiP-7h-FDN" secondAttribute="top" id="bOX-rj-2QB"/>
                             <constraint firstItem="QiP-7h-FDN" firstAttribute="trailing" secondItem="OSY-Vf-Bq3" secondAttribute="trailing" id="lgo-eR-t55"/>

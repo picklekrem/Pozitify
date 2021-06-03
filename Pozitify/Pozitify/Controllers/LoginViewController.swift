@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
                 else {
                     //perform segue
                     print("login tamamlandı")
+                    self.loadScreen(name: "Main", identifier: "tabBar")
                 }
             }
             
@@ -39,3 +40,5 @@ class LoginViewController: UIViewController {
         }
     }
 }
+
+

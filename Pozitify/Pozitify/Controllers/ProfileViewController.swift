@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController {
         do {
             try Auth.auth().signOut()
             print("logout yapıldı.")
+            self.loadScreen(name: "Auth", identifier: "loginVC")
             //self.performSegue(withIdentifier: "toAuthVC", sender: nil)
         }catch{
             print("error")

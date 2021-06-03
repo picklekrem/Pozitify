@@ -8,18 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main-->
-        <scene sceneID="OxI-dg-54X">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="hED-V6-ry6" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YeR-Jx-zr5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="133" y="547"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="Pozitify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="Pozitify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +20,7 @@
                                 <rect key="frame" x="78" y="670" width="287" height="78"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="hED-V6-ry6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="VLN-VH-mfo"/>
+                                    <segue destination="esq-ZI-iR5" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="QIk-G3-Jtv"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUb-8Z-yK1">
@@ -110,6 +102,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3N-rg-u11">
+                                <rect key="frame" x="184" y="520" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Y6W-OH-hqX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="F7q-nB-7f4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7gx-bA-eSL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
