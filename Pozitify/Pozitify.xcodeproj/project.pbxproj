@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		10FAF62DA03D901D9EBFC0C1 /* Pods_Pozitify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04466FDC3A4F0810BE7C0AA /* Pods_Pozitify.framework */; };
 		B93E87502666886600B6B1CC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93E874F2666886600B6B1CC /* Auth.storyboard */; };
+		EA8724992668E73900D3722F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8724982668E73900D3722F /* LoginViewController.swift */; };
+		EA87249B2668E79300D3722F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA87249A2668E79300D3722F /* SignUpViewController.swift */; };
 		EAC4053326664D6600BA0D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4053226664D6600BA0D81 /* AppDelegate.swift */; };
 		EAC4053526664D6600BA0D81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4053426664D6600BA0D81 /* SceneDelegate.swift */; };
 		EAC4053726664D6600BA0D81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4053626664D6600BA0D81 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 		B93E874F2666886600B6B1CC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		C04466FDC3A4F0810BE7C0AA /* Pods_Pozitify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pozitify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6818C024A12E161CCF269A /* Pods-Pozitify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozitify.debug.xcconfig"; path = "Target Support Files/Pods-Pozitify/Pods-Pozitify.debug.xcconfig"; sourceTree = "<group>"; };
+		EA8724982668E73900D3722F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EA87249A2668E79300D3722F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EAC4052F26664D6600BA0D81 /* Pozitify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pozitify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC4053226664D6600BA0D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAC4053426664D6600BA0D81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				EAC4054826664E9C00BA0D81 /* TasksViewController.swift */,
 				EAC4054A26664EAE00BA0D81 /* IdeasViewController.swift */,
 				EAC4054C26664EBB00BA0D81 /* ProfileViewController.swift */,
+				EA8724982668E73900D3722F /* LoginViewController.swift */,
+				EA87249A2668E79300D3722F /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 				EAC4054D26664EBB00BA0D81 /* ProfileViewController.swift in Sources */,
 				EAC4053726664D6600BA0D81 /* ViewController.swift in Sources */,
 				EAC4054926664E9C00BA0D81 /* TasksViewController.swift in Sources */,
+				EA8724992668E73900D3722F /* LoginViewController.swift in Sources */,
 				EAC4053326664D6600BA0D81 /* AppDelegate.swift in Sources */,
+				EA87249B2668E79300D3722F /* SignUpViewController.swift in Sources */,
 				EAC4054B26664EAE00BA0D81 /* IdeasViewController.swift in Sources */,
 				EAC4053526664D6600BA0D81 /* SceneDelegate.swift in Sources */,
 			);

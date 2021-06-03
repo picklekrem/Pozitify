@@ -16,6 +16,7 @@ class TasksViewController: UIViewController {
        
         taskTableView.separatorStyle = .none
         taskTableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.identifier)
+        print("ekrem")
     }
 
 }
