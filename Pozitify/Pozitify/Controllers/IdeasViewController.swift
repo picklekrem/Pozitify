@@ -17,10 +17,6 @@ class IdeasViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        titleTextView.delegate = self
-        
-//        textViewDidBeginEditing(titleTextView)
-//        //textViewDidEndEditing(titleTextView)
     }
     
     func configureUI() {

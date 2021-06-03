@@ -38,4 +38,12 @@ class LoginViewController: UIViewController {
             self.makeAlert(titleInput: "Error!", messageInput: "Kullanıcı adı veya Şifre hatalı/boş")
         }
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return(true)
+    }
 }
