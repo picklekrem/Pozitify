@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IdeasViewController: UIViewController {
+class IdeasViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet var backView: UIView!
     @IBOutlet var ideasView: UIView!
@@ -17,6 +17,7 @@ class IdeasViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        titleTextView.delegate = self
     }
     
     func configureUI() {
@@ -37,7 +38,7 @@ class IdeasViewController: UIViewController {
             textview.textColor = UIColor.black
         }
     }
-    
+
     func textViewDidEndEditing(_ textview: UITextView) {
         if textview.text == "" {
             textview.text = "Tell us the things that makes you happy in your daily life so we can share them with other people!"
