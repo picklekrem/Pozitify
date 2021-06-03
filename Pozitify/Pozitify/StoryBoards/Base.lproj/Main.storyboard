@@ -54,14 +54,18 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C23-yD-ocq">
-                                        <rect key="frame" x="20" y="385" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="385" width="374" height="60"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="r5D-Dd-RzU"/>
+                                            <constraint firstAttribute="height" constant="60" id="r5D-Dd-RzU"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Submit!">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="COx-K2-Gpc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,6 +89,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ideas" largeTitleDisplayMode="always" id="JPc-Hv-hJG"/>
+                    <connections>
+                        <outlet property="backView" destination="QgD-ew-qXp" id="cOg-oK-G6Q"/>
+                        <outlet property="ideasView" destination="BEH-Xz-I6e" id="5kS-Wp-V2p"/>
+                        <outlet property="submitButton" destination="C23-yD-ocq" id="HBM-26-dV9"/>
+                        <outlet property="titleTextView" destination="PDp-fk-bGE" id="A0w-dc-Nq2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
