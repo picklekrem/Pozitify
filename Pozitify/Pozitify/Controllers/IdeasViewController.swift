@@ -17,8 +17,6 @@ class IdeasViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        textViewDidBeginEditing(titleTextView)
-        //textViewDidEndEditing(titleTextView)
     }
     
     func configureUI() {
