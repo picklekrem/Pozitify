@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordAgainTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +39,18 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func termsButton(_ sender: UISwitch) {
+        if (sender.isOn == false)
+        {
+            signUpButton.isEnabled = false
+        }
+        else{
+            signUpButton.isEnabled = true
+        }
+    }
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -74,20 +87,15 @@ class SettingUpProfileViewController : UIViewController {
     }
 }
 
-extension UIViewController {
-    func makeAlert(titleInput : String, messageInput : String) {
-        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
-        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
-        alert.addAction(okButton)
-        self.present(alert, animated: true, completion: nil)
-    }
-}
+
 extension SettingUpProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
             profileImageView.contentMode = .scaleAspectFit
             profileImageView.image = image
+            let imageData : NSData =  (image.pngData() as NSData?)!
+            UserDefaults().setValue(imageData, forKey: "profilePicture")
         }
         
         picker.dismiss(animated: true, completion: nil)
