@@ -37,7 +37,7 @@ class IdeasViewController: UIViewController, UITextViewDelegate {
             textview.textColor = UIColor.black
         }
     }
-
+    
     func textViewDidEndEditing(_ textview: UITextView) {
         if textview.text == "" {
             textview.text = "Tell us the things that makes you happy in your daily life so we can share them with other people!"
