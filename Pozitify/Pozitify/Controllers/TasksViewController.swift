@@ -15,7 +15,7 @@ class TasksViewController: UIViewController {
     @IBOutlet weak var taskTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("ekrem")
         taskTableView.separatorStyle = .none
         taskTableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.identifier)
         getData()
