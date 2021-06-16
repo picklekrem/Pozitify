@@ -6,19 +6,35 @@
 //
 
 import UIKit
+import Firebase
 
 class TasksViewController: UIViewController {
-
+    
+    let firestoreDatabase = Firestore.firestore()
     
     @IBOutlet weak var taskTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         taskTableView.separatorStyle = .none
         taskTableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.identifier)
-        print("ekrem")
+        getData()
+        
     }
-
+    
+    func getData() {
+        
+        firestoreDatabase.collection("Tasks").getDocuments { querySnapshot, error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) ==> \(document.data())")
+                }
+            }
+        }
+    }
+    
 }
 
 extension TasksViewController : UITableViewDelegate, UITableViewDataSource {

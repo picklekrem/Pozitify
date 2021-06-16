@@ -31,6 +31,8 @@ class SignUpViewController: UIViewController {
                     }else {
                         let userDictionary = ["Email" : self.emailTextField.text!,"Full Name" : self.fullNameTextField.text!, "Password" : self.passwordTextField.text!] as [String : Any]
                         self.firestoredatabase.collection("Users").document(Auth.auth().currentUser!.email!).setData(userDictionary)
+                        let name = self.fullNameTextField.text!
+                        UserDefaults.setValue(name, forKey: "FullName") as! NSData
                         self.performSegue(withIdentifier: "toSettingUp", sender: nil)
                     }
                 }
@@ -65,6 +67,7 @@ class SignUpViewController: UIViewController {
 }
 
 class SettingUpProfileViewController : UIViewController {
+    
     let firestoredatabase = Firestore.firestore()
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -84,6 +87,9 @@ class SettingUpProfileViewController : UIViewController {
         pickerController.allowsEditing = true
         present(pickerController, animated: true)
         
+    }
+    @IBAction func doneButtonClicked(_ sender: Any) {
+        loadScreen(name: "Main", identifier: "tabBar")
     }
 }
 

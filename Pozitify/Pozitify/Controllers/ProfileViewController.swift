@@ -16,16 +16,18 @@ class ProfileViewController: UIViewController {
         profilePictureUpload()
         
         // Access Shared Defaults Object
-        let userDefaults = UserDefaults.standard
-        
-        // Create and Write Array of Strings
-        let array = ["One", "Two", "Three"]
-        userDefaults.set(array, forKey: "myKey")
-        
-        // Read/Get Array of Strings
-        var strings = [Array<Any>]()
-        strings = userDefaults.object(forKey: "myKey") as! [Array<Any>]
-        print(strings[0])
+//        let userDefaults = UserDefaults.standard
+//        
+//        // Create and Write Array of Strings
+//        let array = ["One", "Two", "Three"]
+//        userDefaults.set(array, forKey: "myKey")
+//        
+//        // Read/Get Array of Strings
+//        var strings = [Array<Any>]()
+//        strings = userDefaults.object(forKey: "myKey") as! [Array<Any>]
+//        print(strings[0])
+//        let name = UserDefaults.standard.object(forKey: "FullName") as! String
+//        print(name)
         
     }
     
@@ -34,7 +36,7 @@ class ProfileViewController: UIViewController {
         if profilePic == nil {
             profileImageView.image = UIImage(named: "profilePlaceHolder")
         }else {
-            profileImageView.image = UIImage(data: profilePic as! Data)
+            profileImageView.image = UIImage(data: profilePic! as Data)
         }
     }
     

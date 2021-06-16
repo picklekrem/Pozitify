@@ -11,6 +11,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let array = ["horse", "cow", "camel", "sheep", "goat"]
+
+        let defaults = UserDefaults.standard
+        //defaults.set(array, forKey: "SavedStringArray")
+        
+        let myarray = defaults.stringArray(forKey: "SavedStringArray") ?? [String]()
+        print(myarray)
     }
 
 

@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Firebase
 
 class IdeasViewController: UIViewController, UITextViewDelegate {
+    
+    let firestoredatabase = Firestore.firestore()
     
     @IBOutlet var backView: UIView!
     @IBOutlet var ideasView: UIView!
@@ -55,6 +58,16 @@ class IdeasViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func submitButtonClicked(_ sender: Any) {
+        let ideaPost = ["Idea" : titleTextView.text!, "Email" : Auth.auth().currentUser?.email!] as [String : Any]
+        firestoredatabase.collection("Ideas").addDocument(data: ideaPost) { error in
+            if error != nil {
+                self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error" )
+            } else {
+                self.makeAlert(titleInput: "Thank you! :)", messageInput: "Thanks for your kind idea :)")
+                self.titleTextView.text = ""
+                self.tabBarController?.selectedIndex = 0
+            }
+        }
         
     }
 }
