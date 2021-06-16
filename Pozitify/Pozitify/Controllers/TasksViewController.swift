@@ -18,6 +18,8 @@ class TasksViewController: UIViewController {
         print("ekrem")
         print("ekrem")
         print("ekrem")
+        print("onur")
+
         taskTableView.separatorStyle = .none
         taskTableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.identifier)
         getData()
