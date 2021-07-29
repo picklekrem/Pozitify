@@ -31,9 +31,8 @@ class SignUpViewController: UIViewController {
                     }else {
                         let userDictionary = ["Email" : self.emailTextField.text!,"Full Name" : self.fullNameTextField.text!, "Password" : self.passwordTextField.text!] as [String : Any]
                         self.firestoredatabase.collection("Users").document(Auth.auth().currentUser!.email!).setData(userDictionary)
-                        let name = self.fullNameTextField.text!
-                        UserDefaults.setValue(name, forKey: "FullName") as! NSData
-                        self.performSegue(withIdentifier: "toSettingUp", sender: nil)
+                        //self.performSegue(withIdentifier: "toSettingUp", sender: nil)
+                        self.loadScreen(name: "Auth", identifier: "settingUpVC")
                     }
                 }
             } else {
@@ -77,16 +76,13 @@ class SettingUpProfileViewController : UIViewController {
         profileImageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
         profileImageView.addGestureRecognizer(gestureRecognizer)
-
     }
     @objc func chooseImage(){
-        
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = .photoLibrary
         pickerController.allowsEditing = true
         present(pickerController, animated: true)
-        
     }
     @IBAction func doneButtonClicked(_ sender: Any) {
         loadScreen(name: "Main", identifier: "tabBar")
@@ -103,7 +99,6 @@ extension SettingUpProfileViewController : UIImagePickerControllerDelegate, UINa
             let imageData : NSData =  (image.pngData() as NSData?)!
             UserDefaults().setValue(imageData, forKey: "profilePicture")
         }
-        
         picker.dismiss(animated: true, completion: nil)
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

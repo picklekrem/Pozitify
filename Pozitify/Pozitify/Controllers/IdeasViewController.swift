@@ -20,6 +20,10 @@ class IdeasViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        let defaults = UserDefaults.standard
+//        let myarray = defaults.object(forKey: "myKey") as! [String : String]
+        let deneme = [defaults.dictionary(forKey: "myKey")]
+        print(deneme[1])
     }
     
     func configureUI() {
@@ -40,7 +44,7 @@ class IdeasViewController: UIViewController, UITextViewDelegate {
             textview.textColor = UIColor.black
         }
     }
-
+    
     func textViewDidEndEditing(_ textview: UITextView) {
         if textview.text == "" {
             textview.text = "Tell us the things that makes you happy in your daily life so we can share them with other people!"

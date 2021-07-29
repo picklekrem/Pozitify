@@ -14,21 +14,19 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePictureUpload()
-        
-        // Access Shared Defaults Object
-//        let userDefaults = UserDefaults.standard
-//        
-//        // Create and Write Array of Strings
-//        let array = ["One", "Two", "Three"]
-//        userDefaults.set(array, forKey: "myKey")
-//        
-//        // Read/Get Array of Strings
-//        var strings = [Array<Any>]()
-//        strings = userDefaults.object(forKey: "myKey") as! [Array<Any>]
-//        print(strings[0])
-//        let name = UserDefaults.standard.object(forKey: "FullName") as! String
-//        print(name)
-        
+        profileImageView.isUserInteractionEnabled = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
+        profileImageView.addGestureRecognizer(gestureRecognizer)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        profilePictureUpload()
+    }
+    @objc func chooseImage(){
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = .photoLibrary
+        pickerController.allowsEditing = true
+        present(pickerController, animated: true)
     }
     
     func profilePictureUpload() {
@@ -43,11 +41,25 @@ class ProfileViewController: UIViewController {
     @IBAction func logOutClicked(_ sender: Any) {
         do {
             try Auth.auth().signOut()
-            print("logout yapıldı.")
             self.loadScreen(name: "Auth", identifier: "loginVC")
-            //self.performSegue(withIdentifier: "toAuthVC", sender: nil)
         }catch{
             print("error")
         }
+    }
+}
+
+extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
+            profileImageView.contentMode = .scaleAspectFit
+            profileImageView.image = image
+            let imageData : NSData =  (image.pngData() as NSData?)!
+            UserDefaults().setValue(imageData, forKey: "profilePicture")
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }

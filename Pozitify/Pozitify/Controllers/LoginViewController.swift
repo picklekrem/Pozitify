@@ -16,32 +16,28 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
     @IBAction func loginClicked(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" {
-         
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authData, error) in
                 if error != nil {
                     self.makeAlert(titleInput: "Error!", messageInput: error?.localizedDescription ?? "Try again")
                 }
                 else {
-                    //perform segue
-                    print("login tamamlandı")
                     self.loadScreen(name: "Main", identifier: "tabBar")
                 }
             }
-            
         }
-        else{
+        else {
             self.makeAlert(titleInput: "Error!", messageInput: "Kullanıcı adı veya Şifre hatalı/boş")
         }
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
