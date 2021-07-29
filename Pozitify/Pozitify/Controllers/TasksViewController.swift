@@ -19,6 +19,7 @@ class TasksViewController: UIViewController {
     let defaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
+
         taskTableView.separatorStyle = .none
         taskTableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.identifier)
         showSpinner()
