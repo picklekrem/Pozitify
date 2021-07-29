@@ -17,6 +17,7 @@ class TasksViewController: UIViewController {
     let decoder = JSONDecoder()
     var taskSize = 3
     let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,8 +37,8 @@ class TasksViewController: UIViewController {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) ==> \(document.data())")
                     
-                    self.defaults.set(document.data(), forKey: "myKey")
-                    let deneme = [self.defaults.dictionary(forKey: "myKey")]
+                    var deneme = self.defaults.set(document.data(), forKey: "myKey")
+                //    deneme = [self.defaults.dictionary(forKey: "myKey")]
                     
                     do{
                         let jsonData = try? JSONSerialization.data(withJSONObject:document.data())
@@ -55,8 +56,8 @@ class TasksViewController: UIViewController {
                     self.taskTableView.reloadData()
                     self.taskTableView.isHidden = false
                     self.removeSpinner()
-                    
                 }
+                
             }
         }
     }
