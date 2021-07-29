@@ -14,7 +14,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="Hwb-lC-NrC" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1z-F4-U4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602" y="1029"/>
+            <point key="canvasLocation" x="1851" y="790"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -283,7 +283,7 @@ details for your new account</string>
         <!--Setting Up Profile View Controller-->
         <scene sceneID="huN-LZ-V4K">
             <objects>
-                <viewController id="i9J-Jq-daM" customClass="SettingUpProfileViewController" customModule="Pozitify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingUpVC" id="i9J-Jq-daM" customClass="SettingUpProfileViewController" customModule="Pozitify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OTs-fW-533">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
