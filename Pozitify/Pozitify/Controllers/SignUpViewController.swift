@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 
 class SignUpViewController: UIViewController {
-
+    
     let firestoredatabase = Firestore.firestore()
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -19,7 +19,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     @IBAction func signupClicked(_ sender: Any) {
@@ -43,11 +43,10 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func termsButton(_ sender: UISwitch) {
-        if (sender.isOn == false)
-        {
+        if (sender.isOn == false) {
             signUpButton.isEnabled = false
         }
-        else{
+        else {
             signUpButton.isEnabled = true
         }
     }
@@ -56,6 +55,7 @@ class SignUpViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
@@ -63,7 +63,6 @@ class SignUpViewController: UIViewController {
         passwordAgainTextField.resignFirstResponder()
         return(true)
     }
-    
 }
 
 class SettingUpProfileViewController : UIViewController {
@@ -77,33 +76,29 @@ class SettingUpProfileViewController : UIViewController {
         profileImageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
         profileImageView.addGestureRecognizer(gestureRecognizer)
-
+        
     }
     @objc func chooseImage(){
-        
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = .photoLibrary
         pickerController.allowsEditing = true
         present(pickerController, animated: true)
-        
     }
     @IBAction func doneButtonClicked(_ sender: Any) {
         loadScreen(name: "Main", identifier: "tabBar")
     }
 }
 
-
 extension SettingUpProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
+        
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
             profileImageView.contentMode = .scaleAspectFit
             profileImageView.image = image
             let imageData : NSData =  (image.pngData() as NSData?)!
             UserDefaults().setValue(imageData, forKey: "profilePicture")
         }
-        
         picker.dismiss(animated: true, completion: nil)
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
