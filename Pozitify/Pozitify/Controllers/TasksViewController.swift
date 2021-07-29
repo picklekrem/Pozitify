@@ -17,6 +17,7 @@ class TasksViewController: UIViewController {
     let decoder = JSONDecoder()
     var taskSize = 3
     let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,8 +56,8 @@ class TasksViewController: UIViewController {
                     self.taskTableView.reloadData()
                     self.taskTableView.isHidden = false
                     self.removeSpinner()
-                    
                 }
+                
             }
         }
     }
