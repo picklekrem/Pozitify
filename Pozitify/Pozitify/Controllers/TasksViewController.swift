@@ -37,9 +37,9 @@ class TasksViewController: UIViewController {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) ==> \(document.data())")
                     
-                    var deneme = self.defaults.set(document.data(), forKey: "myKey")
-                //    deneme = [self.defaults.dictionary(forKey: "myKey")]
-                    
+//                    self.defaults.set(document.data(), forKey: "myKey")
+//                    let deneme = [self.defaults.dictionary(forKey: "myKey")]
+//                    print(deneme)
                     do{
                         let jsonData = try? JSONSerialization.data(withJSONObject:document.data())
                         let taskModel = try self.decoder.decode(TaskContainerList.self, from: jsonData!)

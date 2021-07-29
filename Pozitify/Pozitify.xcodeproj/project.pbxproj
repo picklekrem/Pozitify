@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10FAF62DA03D901D9EBFC0C1 /* Pods_Pozitify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04466FDC3A4F0810BE7C0AA /* Pods_Pozitify.framework */; };
+		3C1B8BDB5F5FEA80A903311F /* Pods_Pozitify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9362E263F2490262B7FA7B /* Pods_Pozitify.framework */; };
 		B93E87502666886600B6B1CC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93E874F2666886600B6B1CC /* Auth.storyboard */; };
 		B9A8DB4A266907DC00BE72DA /* ExtensionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */; };
 		EA04935026B15748009756D1 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA04934F26B15747009756D1 /* TaskList.swift */; };
@@ -28,11 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A44F0AC664F80443DFF380C3 /* Pods-Pozitify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozitify.release.xcconfig"; path = "Target Support Files/Pods-Pozitify/Pods-Pozitify.release.xcconfig"; sourceTree = "<group>"; };
+		7DD33EFF794E0B73267D190A /* Pods-Pozitify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozitify.debug.xcconfig"; path = "Target Support Files/Pods-Pozitify/Pods-Pozitify.debug.xcconfig"; sourceTree = "<group>"; };
+		8195D060D770DBA667DDB69A /* Pods-Pozitify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozitify.release.xcconfig"; path = "Target Support Files/Pods-Pozitify/Pods-Pozitify.release.xcconfig"; sourceTree = "<group>"; };
 		B93E874F2666886600B6B1CC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsVC.swift; sourceTree = "<group>"; };
-		C04466FDC3A4F0810BE7C0AA /* Pods_Pozitify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pozitify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE6818C024A12E161CCF269A /* Pods-Pozitify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozitify.debug.xcconfig"; path = "Target Support Files/Pods-Pozitify/Pods-Pozitify.debug.xcconfig"; sourceTree = "<group>"; };
 		EA04934F26B15747009756D1 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		EA8724982668E73900D3722F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA87249A2668E79300D3722F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		EAC4054E2666512200BA0D81 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		EAC4054F2666512200BA0D81 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		EAC40552266671C700BA0D81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB9362E263F2490262B7FA7B /* Pods_Pozitify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pozitify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +57,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10FAF62DA03D901D9EBFC0C1 /* Pods_Pozitify.framework in Frameworks */,
+				3C1B8BDB5F5FEA80A903311F /* Pods_Pozitify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A1CC0F70D4B0A8F1BAE9446 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB9362E263F2490262B7FA7B /* Pods_Pozitify.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B93E874E2666884700B6B1CC /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,18 +93,10 @@
 		D58403855BD7F3027C583CC1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DE6818C024A12E161CCF269A /* Pods-Pozitify.debug.xcconfig */,
-				A44F0AC664F80443DFF380C3 /* Pods-Pozitify.release.xcconfig */,
+				7DD33EFF794E0B73267D190A /* Pods-Pozitify.debug.xcconfig */,
+				8195D060D770DBA667DDB69A /* Pods-Pozitify.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		D8A5DB16E5A7BDA713B03B55 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C04466FDC3A4F0810BE7C0AA /* Pods_Pozitify.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EAC4052626664D6600BA0D81 = {
@@ -105,7 +105,7 @@
 				EAC4053126664D6600BA0D81 /* Pozitify */,
 				EAC4053026664D6600BA0D81 /* Products */,
 				D58403855BD7F3027C583CC1 /* Pods */,
-				D8A5DB16E5A7BDA713B03B55 /* Frameworks */,
+				6A1CC0F70D4B0A8F1BAE9446 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,11 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAC4054326664D6800BA0D81 /* Build configuration list for PBXNativeTarget "Pozitify" */;
 			buildPhases = (
-				9BF7FF51D03436960FF38D57 /* [CP] Check Pods Manifest.lock */,
+				A41295C9745D5272A55F6B39 /* [CP] Check Pods Manifest.lock */,
 				EAC4052B26664D6600BA0D81 /* Sources */,
 				EAC4052C26664D6600BA0D81 /* Frameworks */,
 				EAC4052D26664D6600BA0D81 /* Resources */,
-				3301AB2657D8C29B73B8804D /* [CP] Embed Pods Frameworks */,
+				36D83E69B39FEF039A245116 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,7 +227,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3301AB2657D8C29B73B8804D /* [CP] Embed Pods Frameworks */ = {
+		36D83E69B39FEF039A245116 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -244,7 +244,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pozitify/Pods-Pozitify-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9BF7FF51D03436960FF38D57 /* [CP] Check Pods Manifest.lock */ = {
+		A41295C9745D5272A55F6B39 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -427,7 +427,7 @@
 		};
 		EAC4054426664D6800BA0D81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE6818C024A12E161CCF269A /* Pods-Pozitify.debug.xcconfig */;
+			baseConfigurationReference = 7DD33EFF794E0B73267D190A /* Pods-Pozitify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,7 +447,7 @@
 		};
 		EAC4054526664D6800BA0D81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A44F0AC664F80443DFF380C3 /* Pods-Pozitify.release.xcconfig */;
+			baseConfigurationReference = 8195D060D770DBA667DDB69A /* Pods-Pozitify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
