@@ -1,0 +1,6 @@
+framework module Pods_Pozitify {
+  umbrella header "Pods-Pozitify-umbrella.h"
+
+  export *
+  module * { export * }
+}
