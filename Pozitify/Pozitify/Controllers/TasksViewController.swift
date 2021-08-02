@@ -6,51 +6,27 @@
 //
 
 import UIKit
-import Firebase
 
 class TasksViewController: UIViewController {
-    
-    let firestoreDatabase = Firestore.firestore()
     @IBOutlet weak var taskTableView: UITableView!
     
     var taskContainerList : [TaskContainerList] = []
-    let decoder = JSONDecoder()
     var taskSize = 3
     let defaults = UserDefaults.standard
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        taskTableView.separatorStyle = .none
         taskTableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.identifier)
         showSpinner()
         taskTableView.isHidden = true
         getData()
     }
-    
-    func getData() {
-        firestoreDatabase.collection("Tasks").getDocuments { querySnapshot, error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) ==> \(document.data())")
-                    do{
-                        let jsonData = try? JSONSerialization.data(withJSONObject:document.data())
-                        let taskModel = try self.decoder.decode(TaskContainerList.self, from: jsonData!)
-                        self.taskContainerList.append(taskModel)
-                    }
-                    catch let err
-                    {
-                        print(err)
-                    }
-                    self.taskContainerList.shuffle()
-                    self.taskTableView.reloadData()
-                    self.taskTableView.isHidden = false
-                    self.removeSpinner()
-                }
-            }
+    func getData(){
+        WebService().getTaskData { response in
+            self.taskContainerList.append(response!)
+            self.taskTableView.reloadData()
+            self.taskTableView.isHidden = false
+            self.removeSpinner()
         }
     }
 }

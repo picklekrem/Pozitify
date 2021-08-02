@@ -10,5 +10,4 @@ import Foundation
 struct TaskContainerList: Codable {
     let Title : String
     let Task : String
-    
 }
