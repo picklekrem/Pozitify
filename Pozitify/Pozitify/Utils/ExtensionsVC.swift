@@ -38,4 +38,15 @@ extension UIViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
     }
+    
+}
+
+extension UIImageView {
+    func roundedImage(){
+        self.backgroundColor = UIColor.black
+        self.layer.cornerRadius = self.frame.size.width / 2
+        self.clipsToBounds = true
+        self.layer.borderWidth = 4
+        self.layer.borderColor = UIColor.white.cgColor
+    }
 }

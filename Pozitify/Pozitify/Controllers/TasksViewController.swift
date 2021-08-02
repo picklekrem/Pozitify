@@ -18,6 +18,7 @@ class TasksViewController: UIViewController {
     var taskSize = 3
     let defaults = UserDefaults.standard
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,24 +30,16 @@ class TasksViewController: UIViewController {
     }
     
     func getData() {
-        
         firestoreDatabase.collection("Tasks").getDocuments { querySnapshot, error in
             if let error = error {
                 print(error.localizedDescription)
             } else {
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) ==> \(document.data())")
-                    
-//                    self.defaults.set(document.data(), forKey: "myKey")
-//                    let deneme = [self.defaults.dictionary(forKey: "myKey")]
-//                    print(deneme)
                     do{
                         let jsonData = try? JSONSerialization.data(withJSONObject:document.data())
                         let taskModel = try self.decoder.decode(TaskContainerList.self, from: jsonData!)
                         self.taskContainerList.append(taskModel)
-//                        a = yapılacaklar     &&    b = yapılmışlar
-//                        biz her zaman A dan çekicez verileri
-//                        A da yapıldığında B ye kaydedicez, sonra A dan silicez.
                     }
                     catch let err
                     {
@@ -57,11 +50,9 @@ class TasksViewController: UIViewController {
                     self.taskTableView.isHidden = false
                     self.removeSpinner()
                 }
-                
             }
         }
     }
-    
 }
 
 extension TasksViewController : UITableViewDelegate, UITableViewDataSource {

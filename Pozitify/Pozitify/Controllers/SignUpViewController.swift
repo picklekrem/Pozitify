@@ -75,6 +75,7 @@ class SettingUpProfileViewController : UIViewController {
         profileImageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
         profileImageView.addGestureRecognizer(gestureRecognizer)
+        profileImageView.roundedImage() 
     }
     @objc func chooseImage(){
         let pickerController = UIImagePickerController()

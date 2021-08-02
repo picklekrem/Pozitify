@@ -11,15 +11,15 @@ import Firebase
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePictureUpload()
-        profileImageView.isUserInteractionEnabled = true
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
-        profileImageView.addGestureRecognizer(gestureRecognizer)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        profilePictureUpload()
+        
+        nameLabel.text = "Ekrem"
+        infoLabel.text = Auth.auth().currentUser?.email!
+        
     }
     @objc func chooseImage(){
         let pickerController = UIImagePickerController()
@@ -30,12 +30,16 @@ class ProfileViewController: UIViewController {
     }
     
     func profilePictureUpload() {
+        profileImageView.isUserInteractionEnabled = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
+        profileImageView.addGestureRecognizer(gestureRecognizer)
         let profilePic = UserDefaults.standard.object(forKey: "profilePicture") as? NSData
         if profilePic == nil {
             profileImageView.image = UIImage(named: "profilePlaceHolder")
         }else {
             profileImageView.image = UIImage(data: profilePic! as Data)
         }
+        profileImageView.roundedImage()
     }
     
     @IBAction func logOutClicked(_ sender: Any) {
