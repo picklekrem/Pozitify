@@ -22,8 +22,8 @@ class IdeasViewController: UIViewController, UITextViewDelegate {
         configureUI()
         let defaults = UserDefaults.standard
 //        let myarray = defaults.object(forKey: "myKey") as! [String : String]
-        let deneme = [defaults.dictionary(forKey: "myKey")]
-        print(deneme)
+        let deneme = defaults.dictionary(forKey: "myKey")
+      //  print(deneme!)
     }
     
     func configureUI() {
