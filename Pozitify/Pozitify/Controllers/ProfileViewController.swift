@@ -54,25 +54,4 @@ class ProfileViewController: UIViewController {
 }
 
 
-<<<<<<< HEAD
-=======
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
-            profileImageView.contentMode = .scaleAspectFit
-            profileImageView.image = image
-            let imageData : NSData =  (image.pngData() as NSData?)!
-            UserDefaults().setValue(imageData, forKey: "profilePicture")
-        }
-        picker.dismiss(animated: true, completion: nil)
-    }
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    @objc func chooseImage(){
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        pickerController.sourceType = .photoLibrary
-        pickerController.allowsEditing = true
-        present(pickerController, animated: true)
-    }
-}
->>>>>>> 0df022126dd5849b20aaf88c3dcf8eed102c8974
+
