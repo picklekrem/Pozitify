@@ -16,7 +16,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("onur")
+        conf()
+    }
+    
+    func conf() {
+        emailTextField.addBottomBorder()
+        passwordTextField.addBottomBorder()
     }
     
     @IBAction func loginClicked(_ sender: Any) {
@@ -33,6 +38,10 @@ class LoginViewController: UIViewController {
         else {
             self.makeAlert(titleInput: "Error!", messageInput: "Kullanıcı adı veya Şifre hatalı/boş")
         }
+    }
+    
+    @IBAction func signUpClicked(_ sender: Any) {
+        loadScreen(name: "Auth", identifier: "signUpVC")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

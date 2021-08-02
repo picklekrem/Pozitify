@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3C1B8BDB5F5FEA80A903311F /* Pods_Pozitify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9362E263F2490262B7FA7B /* Pods_Pozitify.framework */; };
+		B91A187526B8107400D9526B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A187426B8107400D9526B /* ForgotPasswordViewController.swift */; };
+		B91A187726B817A800D9526B /* ImagePicker+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A187626B817A800D9526B /* ImagePicker+Ext.swift */; };
 		B93E87502666886600B6B1CC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93E874F2666886600B6B1CC /* Auth.storyboard */; };
 		B9A8DB4A266907DC00BE72DA /* ExtensionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */; };
 		EA04935026B15748009756D1 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA04934F26B15747009756D1 /* TaskList.swift */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		7DD33EFF794E0B73267D190A /* Pods-Pozitify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozitify.debug.xcconfig"; path = "Target Support Files/Pods-Pozitify/Pods-Pozitify.debug.xcconfig"; sourceTree = "<group>"; };
 		8195D060D770DBA667DDB69A /* Pods-Pozitify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozitify.release.xcconfig"; path = "Target Support Files/Pods-Pozitify/Pods-Pozitify.release.xcconfig"; sourceTree = "<group>"; };
+		B91A187426B8107400D9526B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		B91A187626B817A800D9526B /* ImagePicker+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImagePicker+Ext.swift"; sourceTree = "<group>"; };
 		B93E874F2666886600B6B1CC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsVC.swift; sourceTree = "<group>"; };
 		EA04934F26B15747009756D1 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			children = (
 				B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */,
 				EA04934F26B15747009756D1 /* TaskList.swift */,
+				B91A187626B817A800D9526B /* ImagePicker+Ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				EAC4054C26664EBB00BA0D81 /* ProfileViewController.swift */,
 				EA8724982668E73900D3722F /* LoginViewController.swift */,
 				EA87249A2668E79300D3722F /* SignUpViewController.swift */,
+				B91A187426B8107400D9526B /* ForgotPasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -277,10 +283,12 @@
 				EA04935026B15748009756D1 /* TaskList.swift in Sources */,
 				EAC4054D26664EBB00BA0D81 /* ProfileViewController.swift in Sources */,
 				EAC4053726664D6600BA0D81 /* ViewController.swift in Sources */,
+				B91A187726B817A800D9526B /* ImagePicker+Ext.swift in Sources */,
 				EAC4054926664E9C00BA0D81 /* TasksViewController.swift in Sources */,
 				B9A8DB4A266907DC00BE72DA /* ExtensionsVC.swift in Sources */,
 				EA8724992668E73900D3722F /* LoginViewController.swift in Sources */,
 				EAC4053326664D6600BA0D81 /* AppDelegate.swift in Sources */,
+				B91A187526B8107400D9526B /* ForgotPasswordViewController.swift in Sources */,
 				EA87249B2668E79300D3722F /* SignUpViewController.swift in Sources */,
 				EAC4054B26664EAE00BA0D81 /* IdeasViewController.swift in Sources */,
 				EAC4053526664D6600BA0D81 /* SceneDelegate.swift in Sources */,

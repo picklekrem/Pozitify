@@ -50,3 +50,13 @@ extension UIImageView {
         self.layer.borderColor = UIColor.white.cgColor
     }
 }
+
+extension UITextField {
+    func addBottomBorder(){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: self.frame.size.height - 5, width: self.frame.size.width, height: 0.5)
+        bottomLine.backgroundColor = UIColor.gray.cgColor
+        borderStyle = .none
+        layer.addSublayer(bottomLine)
+    }
+}

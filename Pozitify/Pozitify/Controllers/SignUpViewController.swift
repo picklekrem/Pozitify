@@ -19,7 +19,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        conf()
+    }
+    
+    func conf() {
+        emailTextField.addBottomBorder()
+        fullNameTextField.addBottomBorder()
+        passwordTextField.addBottomBorder()
+        passwordAgainTextField.addBottomBorder()
     }
     
     @IBAction func signupClicked(_ sender: Any) {
@@ -39,6 +46,10 @@ class SignUpViewController: UIViewController {
                 makeAlert(titleInput: "Passwords doesnt match!", messageInput: "please enter same passwords.")
             }
         }
+    }
+
+    @IBAction func logInButtonClicked(_ sender: Any) {
+        loadScreen(name: "Auth", identifier: "loginVC")
     }
     
     @IBAction func termsButton(_ sender: UISwitch) {
@@ -77,6 +88,7 @@ class SettingUpProfileViewController : UIViewController {
         profileImageView.addGestureRecognizer(gestureRecognizer)
         profileImageView.roundedImage() 
     }
+    
     @objc func chooseImage(){
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
@@ -84,23 +96,9 @@ class SettingUpProfileViewController : UIViewController {
         pickerController.allowsEditing = true
         present(pickerController, animated: true)
     }
+    
     @IBAction func doneButtonClicked(_ sender: Any) {
         loadScreen(name: "Main", identifier: "tabBar")
     }
 }
 
-extension SettingUpProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
-            profileImageView.contentMode = .scaleAspectFit
-            profileImageView.image = image
-            let imageData : NSData =  (image.pngData() as NSData?)!
-            UserDefaults().setValue(imageData, forKey: "profilePicture")
-        }
-        picker.dismiss(animated: true, completion: nil)
-    }
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-}
