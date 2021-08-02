@@ -13,20 +13,21 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    
+    var userInfoList : UserInfoList?
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePictureUpload()
         
         nameLabel.text = "Ekrem"
         infoLabel.text = Auth.auth().currentUser?.email!
-        
+        getUserInfo()
     }
-    @objc func chooseImage(){
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = self
-        pickerController.sourceType = .photoLibrary
-        pickerController.allowsEditing = true
-        present(pickerController, animated: true)
+    func getUserInfo(){
+        WebService().getUserInfo { userInfoList in
+            print(userInfoList!)
+            self.nameLabel.text = userInfoList?.Email
+        }
     }
     
     func profilePictureUpload() {
@@ -65,5 +66,12 @@ extension ProfileViewController : UIImagePickerControllerDelegate, UINavigationC
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+    @objc func chooseImage(){
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = .photoLibrary
+        pickerController.allowsEditing = true
+        present(pickerController, animated: true)
     }
 }

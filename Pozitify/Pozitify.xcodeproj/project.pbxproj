@@ -11,6 +11,8 @@
 		B93E87502666886600B6B1CC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93E874F2666886600B6B1CC /* Auth.storyboard */; };
 		B9A8DB4A266907DC00BE72DA /* ExtensionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */; };
 		EA04935026B15748009756D1 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA04934F26B15747009756D1 /* TaskList.swift */; };
+		EA3D6E2A26B7F90D007B1307 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D6E2926B7F90D007B1307 /* WebService.swift */; };
+		EA3D6E2D26B7FE95007B1307 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */; };
 		EA8724992668E73900D3722F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8724982668E73900D3722F /* LoginViewController.swift */; };
 		EA87249B2668E79300D3722F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA87249A2668E79300D3722F /* SignUpViewController.swift */; };
 		EAC4053326664D6600BA0D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4053226664D6600BA0D81 /* AppDelegate.swift */; };
@@ -33,6 +35,8 @@
 		B93E874F2666886600B6B1CC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsVC.swift; sourceTree = "<group>"; };
 		EA04934F26B15747009756D1 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		EA3D6E2926B7F90D007B1307 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		EA8724982668E73900D3722F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA87249A2668E79300D3722F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EAC4052F26664D6600BA0D81 /* Pozitify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pozitify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */,
-				EA04934F26B15747009756D1 /* TaskList.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -97,6 +100,23 @@
 				8195D060D770DBA667DDB69A /* Pods-Pozitify.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA3D6E2826B7F8F7007B1307 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EA3D6E2926B7F90D007B1307 /* WebService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EA3D6E2B26B7FE4C007B1307 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA04934F26B15747009756D1 /* TaskList.swift */,
+				EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EAC4052626664D6600BA0D81 = {
@@ -120,6 +140,8 @@
 		EAC4053126664D6600BA0D81 /* Pozitify */ = {
 			isa = PBXGroup;
 			children = (
+				EA3D6E2B26B7FE4C007B1307 /* Model */,
+				EA3D6E2826B7F8F7007B1307 /* Service */,
 				B9A8DB48266907C500BE72DA /* Utils */,
 				B93E874E2666884700B6B1CC /* StoryBoards */,
 				EAC4054726664E8200BA0D81 /* Controllers */,
@@ -279,7 +301,9 @@
 				EAC4053726664D6600BA0D81 /* ViewController.swift in Sources */,
 				EAC4054926664E9C00BA0D81 /* TasksViewController.swift in Sources */,
 				B9A8DB4A266907DC00BE72DA /* ExtensionsVC.swift in Sources */,
+				EA3D6E2A26B7F90D007B1307 /* WebService.swift in Sources */,
 				EA8724992668E73900D3722F /* LoginViewController.swift in Sources */,
+				EA3D6E2D26B7FE95007B1307 /* UserInfo.swift in Sources */,
 				EAC4053326664D6600BA0D81 /* AppDelegate.swift in Sources */,
 				EA87249B2668E79300D3722F /* SignUpViewController.swift in Sources */,
 				EAC4054B26664EAE00BA0D81 /* IdeasViewController.swift in Sources */,
