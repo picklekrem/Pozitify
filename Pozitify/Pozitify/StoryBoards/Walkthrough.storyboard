@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wHk-0V-APV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="ydZ-vv-qnl">
+            <objects>
+                <viewController id="wHk-0V-APV" customClass="WalkthroughViewController" customModule="Pozitify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HrI-3r-8ww">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Inz-YA-4jT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="xxF-ln-1zK" kind="embed" identifier="toPageView" id="OlK-fq-yfB"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-JN-cvE">
+                                <rect key="frame" x="146.5" y="568" width="121" height="27.5"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="pageControlChange:" destination="wHk-0V-APV" eventType="valueChanged" id="JKf-d8-MSQ"/>
+                                </connections>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLH-PA-0rK">
+                                <rect key="frame" x="183" y="788" width="48" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="oMU-pS-FAa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginClicked:" destination="wHk-0V-APV" eventType="touchUpInside" id="CDW-W7-XMa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntp-h0-XYL">
+                                <rect key="frame" x="56" y="683" width="330" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="FSe-jN-MpI"/>
+                                    <constraint firstAttribute="width" constant="330" id="bUb-I3-PDr"/>
+                                </constraints>
+                                <state key="normal" image="GetStartedButton"/>
+                                <connections>
+                                    <action selector="getStartedClicked:" destination="wHk-0V-APV" eventType="touchUpInside" id="gEg-OX-eEP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nFv-8b-Uay"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GLH-PA-0rK" firstAttribute="leading" secondItem="nFv-8b-Uay" secondAttribute="leading" constant="183" id="4up-Ou-3aF"/>
+                            <constraint firstItem="2fh-JN-cvE" firstAttribute="leading" secondItem="nFv-8b-Uay" secondAttribute="leading" constant="146.5" id="7nX-D1-YQO"/>
+                            <constraint firstItem="Inz-YA-4jT" firstAttribute="leading" secondItem="nFv-8b-Uay" secondAttribute="leading" id="8EA-dM-eDF"/>
+                            <constraint firstItem="2fh-JN-cvE" firstAttribute="top" secondItem="nFv-8b-Uay" secondAttribute="top" constant="524" id="GnE-tg-JZA"/>
+                            <constraint firstItem="nFv-8b-Uay" firstAttribute="trailing" secondItem="Inz-YA-4jT" secondAttribute="trailing" id="JMi-c8-91K"/>
+                            <constraint firstItem="Ntp-h0-XYL" firstAttribute="top" secondItem="2fh-JN-cvE" secondAttribute="bottom" constant="87.5" id="MCK-YN-dHp"/>
+                            <constraint firstItem="2fh-JN-cvE" firstAttribute="centerX" secondItem="HrI-3r-8ww" secondAttribute="centerX" id="MmB-1C-Cmk"/>
+                            <constraint firstItem="Ntp-h0-XYL" firstAttribute="leading" secondItem="nFv-8b-Uay" secondAttribute="leading" constant="56" id="Nqw-M4-NRY"/>
+                            <constraint firstItem="GLH-PA-0rK" firstAttribute="top" secondItem="Ntp-h0-XYL" secondAttribute="bottom" constant="30" id="Oui-zs-ExU"/>
+                            <constraint firstItem="Inz-YA-4jT" firstAttribute="top" secondItem="HrI-3r-8ww" secondAttribute="top" id="RMl-8r-E6A"/>
+                            <constraint firstAttribute="bottom" secondItem="Inz-YA-4jT" secondAttribute="bottom" id="cBG-cf-7fW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="Inz-YA-4jT" id="6zS-Ui-mes"/>
+                        <outlet property="getStarted" destination="Ntp-h0-XYL" id="EVl-bZ-rY7"/>
+                        <outlet property="loginButton" destination="GLH-PA-0rK" id="Ery-GA-nJo"/>
+                        <outlet property="pageControl" destination="2fh-JN-cvE" id="pIo-0R-aA9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etZ-sc-eoe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1846" y="58"/>
+        </scene>
+        <!--Demo Page View Controller-->
+        <scene sceneID="LNz-Ep-ncP">
+            <objects>
+                <viewController storyboardIdentifier="DemoPageViewController" id="me6-ZN-llG" customClass="DemoPageViewController" customModule="Pozitify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="00l-4s-kGR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4l-d6-CFS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jGE-3B-f34"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jGE-3B-f34" firstAttribute="trailing" secondItem="J4l-d6-CFS" secondAttribute="trailing" id="B4D-k7-teE"/>
+                            <constraint firstItem="J4l-d6-CFS" firstAttribute="leading" secondItem="jGE-3B-f34" secondAttribute="leading" id="QzR-CX-YuX"/>
+                            <constraint firstAttribute="bottom" secondItem="J4l-d6-CFS" secondAttribute="bottom" id="UeN-gH-ccp"/>
+                            <constraint firstItem="J4l-d6-CFS" firstAttribute="top" secondItem="00l-4s-kGR" secondAttribute="top" id="wWO-FW-ic1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4nh-yX-G0R"/>
+                    <connections>
+                        <outlet property="walkthroughView" destination="J4l-d6-CFS" id="vwH-5m-xop"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXH-rZ-Dhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-370" y="58"/>
+        </scene>
+        <!--Custom Page View Controller-->
+        <scene sceneID="PYV-av-AIy">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="xxF-ln-1zK" customClass="CustomPageViewController" customModule="Pozitify" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6eg-st-MVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1043" y="58"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GetStartedButton" width="313" height="68"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

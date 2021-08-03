@@ -5,7 +5,6 @@
 //  Created by Onur Başdaş on 2.08.2021.
 //
 
-import Foundation
 import UIKit
 
 extension SettingUpProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{

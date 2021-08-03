@@ -27,6 +27,7 @@ class SignUpViewController: UIViewController {
         fullNameTextField.addBottomBorder()
         passwordTextField.addBottomBorder()
         passwordAgainTextField.addBottomBorder()
+        signUpButton.isEnabled = false
     }
     
     @IBAction func signupClicked(_ sender: Any) {
