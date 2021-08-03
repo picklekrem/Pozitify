@@ -12,6 +12,7 @@ class WebService {
     let firestoreDatabase = Firestore.firestore()
     let decoder = JSONDecoder()
     let userEmail = Auth.auth().currentUser?.email
+    
     func getUserInfo(completion : @escaping (UserInfoList?) -> ()){
         firestoreDatabase.collection("Users").document("\(userEmail!)").getDocument { querySnapshot, error in
             if let error = error {print(error.localizedDescription)}

@@ -23,7 +23,6 @@ class IdeasViewController: UIViewController, UITextViewDelegate {
         let defaults = UserDefaults.standard
 //        let myarray = defaults.object(forKey: "myKey") as! [String : String]
         let deneme = defaults.dictionary(forKey: "myKey")
-      //  print(deneme!)
     }
     
     func configureUI() {
@@ -62,6 +61,7 @@ class IdeasViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func submitButtonClicked(_ sender: Any) {
+        
         let ideaPost = ["Idea" : titleTextView.text!, "Email" : Auth.auth().currentUser?.email!] as [String : Any]
         firestoredatabase.collection("Ideas").addDocument(data: ideaPost) { error in
             if error != nil {

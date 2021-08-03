@@ -26,12 +26,10 @@ class TaskTableViewCell: UITableViewCell {
         backView.layer.shadowOpacity = 1.0
         backView.layer.masksToBounds = false
         backView.layer.cornerRadius = 4.0
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     @IBAction func checkButtonClicked(_ sender: Any) {

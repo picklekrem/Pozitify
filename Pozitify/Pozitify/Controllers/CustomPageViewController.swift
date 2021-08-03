@@ -16,7 +16,6 @@ class CustomPageViewController: UIPageViewController {
     
     weak var customDelegate : customPageViewControllerDelegate?
     var individualPageViewControllerList = [UIViewController]()
-    
     var currentPageIndex = 0
     
     override func viewDidLoad() {
@@ -67,7 +66,6 @@ extension CustomPageViewController: UIPageViewControllerDataSource, UIPageViewCo
             return individualPageViewControllerList[indexOfCurrentPageViewController + 1]
         }
     }
-    
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if let currentPageViewController = pageViewController.viewControllers?.first {

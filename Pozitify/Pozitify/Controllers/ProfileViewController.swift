@@ -15,15 +15,16 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     
     var userInfoList : UserInfoList?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePictureUpload()
-        
         nameLabel.text = "Ekrem"
         infoLabel.text = Auth.auth().currentUser?.email!
         getUserInfo()
     }
-    func getUserInfo(){
+    
+    func getUserInfo() {
         WebService().getUserInfo { userInfoList in
             print(userInfoList!)
             self.nameLabel.text = userInfoList?.Email

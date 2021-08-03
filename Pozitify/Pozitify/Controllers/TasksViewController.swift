@@ -8,6 +8,7 @@
 import UIKit
 
 class TasksViewController: UIViewController {
+    
     @IBOutlet weak var taskTableView: UITableView!
     
     var taskContainerList : [TaskContainerList] = []
@@ -21,7 +22,8 @@ class TasksViewController: UIViewController {
         taskTableView.isHidden = true
         getData()
     }
-    func getData(){
+    
+    func getData() {
         WebService().getTaskData { response in
             self.taskContainerList.append(response!)
             self.taskTableView.reloadData()
@@ -32,6 +34,7 @@ class TasksViewController: UIViewController {
 }
 
 extension TasksViewController : UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskSize
     }
@@ -44,6 +47,4 @@ extension TasksViewController : UITableViewDelegate, UITableViewDataSource {
         }
         return taskCell
     }
-    
-    
 }

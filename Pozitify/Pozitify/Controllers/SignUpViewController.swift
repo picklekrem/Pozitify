@@ -17,6 +17,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordAgainTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet var termsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         conf()
@@ -29,7 +31,7 @@ class SignUpViewController: UIViewController {
         passwordAgainTextField.addBottomBorder()
         signUpButton.isEnabled = false
     }
-    
+        
     @IBAction func signupClicked(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" && fullNameTextField.text != "" {
             if passwordTextField.text == passwordAgainTextField.text {
@@ -102,4 +104,3 @@ class SettingUpProfileViewController : UIViewController {
         loadScreen(name: "Main", identifier: "tabBar")
     }
 }
-

@@ -16,6 +16,8 @@
 		B99B3D4C26B9462F00FBC5D9 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D4B26B9462F00FBC5D9 /* CustomPageViewController.swift */; };
 		B99B3D4E26B9466800FBC5D9 /* DemoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D4D26B9466800FBC5D9 /* DemoPageViewController.swift */; };
 		B99B3D5026B9619100FBC5D9 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99B3D4F26B9619100FBC5D9 /* Walkthrough.storyboard */; };
+		B99B3D5226B9656A00FBC5D9 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D5126B9656A00FBC5D9 /* TermsViewController.swift */; };
+		B99B3D5426B965E200FBC5D9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D5326B965E200FBC5D9 /* Constant.swift */; };
 		B9A8DB4A266907DC00BE72DA /* ExtensionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */; };
 		EA3D6E2A26B7F90D007B1307 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D6E2926B7F90D007B1307 /* WebService.swift */; };
 		EA3D6E2D26B7FE95007B1307 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */; };
@@ -46,6 +48,8 @@
 		B99B3D4B26B9462F00FBC5D9 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		B99B3D4D26B9466800FBC5D9 /* DemoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPageViewController.swift; sourceTree = "<group>"; };
 		B99B3D4F26B9619100FBC5D9 /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
+		B99B3D5126B9656A00FBC5D9 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		B99B3D5326B965E200FBC5D9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsVC.swift; sourceTree = "<group>"; };
 		EA3D6E2926B7F90D007B1307 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */,
 				B91A187626B817A800D9526B /* ImagePicker+Ext.swift */,
 				B91A187826B818BE00D9526B /* TaskList.swift */,
+				B99B3D5326B965E200FBC5D9 /* Constant.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -183,15 +188,16 @@
 		EAC4054726664E8200BA0D81 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EA8724982668E73900D3722F /* LoginViewController.swift */,
+				EA87249A2668E79300D3722F /* SignUpViewController.swift */,
 				EAC4054826664E9C00BA0D81 /* TasksViewController.swift */,
 				EAC4054A26664EAE00BA0D81 /* IdeasViewController.swift */,
 				EAC4054C26664EBB00BA0D81 /* ProfileViewController.swift */,
-				EA8724982668E73900D3722F /* LoginViewController.swift */,
-				EA87249A2668E79300D3722F /* SignUpViewController.swift */,
 				B91A187426B8107400D9526B /* ForgotPasswordViewController.swift */,
 				B99B3D4726B945D000FBC5D9 /* WalkthroughViewController.swift */,
 				B99B3D4B26B9462F00FBC5D9 /* CustomPageViewController.swift */,
 				B99B3D4D26B9466800FBC5D9 /* DemoPageViewController.swift */,
+				B99B3D5126B9656A00FBC5D9 /* TermsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -324,10 +330,12 @@
 				B99B3D4C26B9462F00FBC5D9 /* CustomPageViewController.swift in Sources */,
 				EA3D6E2A26B7F90D007B1307 /* WebService.swift in Sources */,
 				EA8724992668E73900D3722F /* LoginViewController.swift in Sources */,
+				B99B3D5226B9656A00FBC5D9 /* TermsViewController.swift in Sources */,
 				B99B3D4826B945D000FBC5D9 /* WalkthroughViewController.swift in Sources */,
 				EA3D6E2D26B7FE95007B1307 /* UserInfo.swift in Sources */,
 				EAC4053326664D6600BA0D81 /* AppDelegate.swift in Sources */,
 				B91A187526B8107400D9526B /* ForgotPasswordViewController.swift in Sources */,
+				B99B3D5426B965E200FBC5D9 /* Constant.swift in Sources */,
 				EA87249B2668E79300D3722F /* SignUpViewController.swift in Sources */,
 				EAC4054B26664EAE00BA0D81 /* IdeasViewController.swift in Sources */,
 				B99B3D4E26B9466800FBC5D9 /* DemoPageViewController.swift in Sources */,

@@ -397,6 +397,7 @@ details for your new account</string>
                         <outlet property="passwordAgainTextField" destination="Pzb-xs-UM3" id="CbS-R7-4aD"/>
                         <outlet property="passwordTextField" destination="QXU-Hz-Z79" id="z2Z-dY-saD"/>
                         <outlet property="signUpButton" destination="qe7-0b-eSJ" id="B27-si-GpA"/>
+                        <outlet property="termsLabel" destination="gAW-y3-MLA" id="NNs-uq-AE1"/>
                         <segue destination="i9J-Jq-daM" kind="presentation" identifier="toSettingUp" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="UV0-JQ-zG1"/>
                     </connections>
                 </viewController>
@@ -436,6 +437,40 @@ details for your new account</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMQ-ZA-0hD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1587" y="58"/>
+        </scene>
+        <!--Terms View Controller-->
+        <scene sceneID="7Qx-Uo-7hQ">
+            <objects>
+                <viewController storyboardIdentifier="TermsViewController" id="SOB-JN-gaV" customClass="TermsViewController" customModule="Pozitify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aU2-fS-sk2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQl-t8-FeK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a5e-xq-pWJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UQl-t8-FeK" firstAttribute="leading" secondItem="a5e-xq-pWJ" secondAttribute="leading" id="5Bz-8t-6aZ"/>
+                            <constraint firstItem="UQl-t8-FeK" firstAttribute="top" secondItem="a5e-xq-pWJ" secondAttribute="top" id="7Bj-XS-CUu"/>
+                            <constraint firstItem="a5e-xq-pWJ" firstAttribute="trailing" secondItem="UQl-t8-FeK" secondAttribute="trailing" id="P7i-tw-aCJ"/>
+                            <constraint firstItem="a5e-xq-pWJ" firstAttribute="bottom" secondItem="UQl-t8-FeK" secondAttribute="bottom" id="VOA-9B-4TV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="termsView" destination="UQl-t8-FeK" id="xp4-R9-Ook"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPY-A0-CgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2505.7971014492755" y="57.589285714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1zV-sE-Vbb">
