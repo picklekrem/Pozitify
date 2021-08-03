@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     func conf() {
         emailTextField.addBottomBorder()
         passwordTextField.addBottomBorder()
+        print("deneme")
     }
     
     @IBAction func loginClicked(_ sender: Any) {
