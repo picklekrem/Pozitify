@@ -10,8 +10,9 @@ import UIKit
 fileprivate var aView : UIView?
 
 extension UIViewController {
-    func showSpinner(){
-       aView = UIView(frame: self.view.bounds)
+    
+    func showSpinner() {
+        aView = UIView(frame: self.view.bounds)
         aView?.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
         let ai = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
         ai.center = aView!.center
@@ -19,7 +20,8 @@ extension UIViewController {
         aView?.addSubview(ai)
         self.view.addSubview(aView!)
     }
-    func removeSpinner(){
+    
+    func removeSpinner() {
         aView?.removeFromSuperview()
         aView = nil
     }
@@ -38,11 +40,11 @@ extension UIViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
     }
-    
 }
 
 extension UIImageView {
-    func roundedImage(){
+    
+    func roundedImage() {
         self.backgroundColor = UIColor.black
         self.layer.cornerRadius = self.frame.size.width / 2
         self.clipsToBounds = true
@@ -52,7 +54,8 @@ extension UIImageView {
 }
 
 extension UITextField {
-    func addBottomBorder(){
+    
+    func addBottomBorder() {
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0, y: self.frame.size.height - 5, width: self.frame.size.width, height: 0.5)
         bottomLine.backgroundColor = UIColor.gray.cgColor

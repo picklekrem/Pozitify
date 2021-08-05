@@ -19,6 +19,8 @@ class TaskTableViewCell: UITableViewCell {
         return UINib(nibName: "TaskTableViewCell", bundle: nil)
     }
     
+    var check : Bool? = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         backView.layer.shadowColor = UIColor.gray.cgColor
@@ -26,6 +28,7 @@ class TaskTableViewCell: UITableViewCell {
         backView.layer.shadowOpacity = 1.0
         backView.layer.masksToBounds = false
         backView.layer.cornerRadius = 4.0
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,5 +36,12 @@ class TaskTableViewCell: UITableViewCell {
     }
     
     @IBAction func checkButtonClicked(_ sender: Any) {
+        if check == false {
+            checkButton.setImage(UIImage(named: "SelectedButton"), for: .normal)
+            check = true
+        } else {
+            checkButton.setImage(UIImage(named: "UnselectedButton"), for: .normal)
+            check = false
+        }
     }
 }

@@ -33,13 +33,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMB-QY-bBa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMB-QY-bBa">
                                 <rect key="frame" x="264" y="5" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HIb-mO-p5l"/>
                                     <constraint firstAttribute="width" constant="50" id="TIa-Td-dUu"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="UnselectedButton"/>
                                 <connections>
                                     <action selector="checkButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="s9f-2U-2A4"/>
                                 </connections>
@@ -78,6 +78,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="UnselectedButton" width="24" height="24"/>
         <namedColor name="MainColor">
             <color red="0.77600002288818359" green="0.92199999094009399" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

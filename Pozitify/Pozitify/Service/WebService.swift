@@ -13,7 +13,7 @@ class WebService {
     let decoder = JSONDecoder()
     let userEmail = Auth.auth().currentUser?.email
     
-    func getUserInfo(completion : @escaping (UserInfoList?) -> ()){
+    func getUserInfo(completion : @escaping (UserInfoList?) -> ()) {
         firestoreDatabase.collection("Users").document("\(userEmail!)").getDocument { querySnapshot, error in
             if let error = error {print(error.localizedDescription)}
             else {
@@ -27,7 +27,8 @@ class WebService {
             }
         }
     }
-    func getTaskData(completion : @escaping (TaskContainerList?) -> ()){
+    
+    func getTaskData(completion : @escaping (TaskContainerList?) -> ()) {
         firestoreDatabase.collection("Tasks").getDocuments { querySnapshot, error in
             if let error = error {
                 print(error.localizedDescription)
