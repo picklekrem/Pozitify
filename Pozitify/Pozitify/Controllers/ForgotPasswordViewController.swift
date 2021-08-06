@@ -19,6 +19,6 @@ class ForgotPasswordViewController: UIViewController {
         if forgotEmailText.text == "" {
             makeAlert(titleInput: "Oh No", messageInput: "Please enter your e-mail")
         }
-        makeAlert(titleInput: "Send E-mail", messageInput: "Completed.")
+        performSegue(withIdentifier: "toResetPassword", sender: nil)
     }
 }

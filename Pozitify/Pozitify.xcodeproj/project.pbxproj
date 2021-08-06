@@ -18,6 +18,7 @@
 		B99B3D5026B9619100FBC5D9 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99B3D4F26B9619100FBC5D9 /* Walkthrough.storyboard */; };
 		B99B3D5226B9656A00FBC5D9 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D5126B9656A00FBC5D9 /* TermsViewController.swift */; };
 		B99B3D5426B965E200FBC5D9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D5326B965E200FBC5D9 /* Constant.swift */; };
+		B9A04A1E26BDB2E0003C4540 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A04A1D26BDB2E0003C4540 /* ResetPasswordViewController.swift */; };
 		B9A8DB4A266907DC00BE72DA /* ExtensionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */; };
 		EA3D6E2A26B7F90D007B1307 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D6E2926B7F90D007B1307 /* WebService.swift */; };
 		EA3D6E2D26B7FE95007B1307 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */; };
@@ -50,6 +51,7 @@
 		B99B3D4F26B9619100FBC5D9 /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		B99B3D5126B9656A00FBC5D9 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		B99B3D5326B965E200FBC5D9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B9A04A1D26BDB2E0003C4540 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsVC.swift; sourceTree = "<group>"; };
 		EA3D6E2926B7F90D007B1307 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				B99B3D4B26B9462F00FBC5D9 /* CustomPageViewController.swift */,
 				B99B3D4D26B9466800FBC5D9 /* DemoPageViewController.swift */,
 				B99B3D5126B9656A00FBC5D9 /* TermsViewController.swift */,
+				B9A04A1D26BDB2E0003C4540 /* ResetPasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				B91A187726B817A800D9526B /* ImagePicker+Ext.swift in Sources */,
 				EAC4054926664E9C00BA0D81 /* TasksViewController.swift in Sources */,
 				B9A8DB4A266907DC00BE72DA /* ExtensionsVC.swift in Sources */,
+				B9A04A1E26BDB2E0003C4540 /* ResetPasswordViewController.swift in Sources */,
 				B91A187926B818BE00D9526B /* TaskList.swift in Sources */,
 				B99B3D4C26B9462F00FBC5D9 /* CustomPageViewController.swift in Sources */,
 				EA3D6E2A26B7F90D007B1307 /* WebService.swift in Sources */,
