@@ -26,7 +26,9 @@ class TasksViewController: UIViewController {
     func getData() {
         WebService().getTaskData { response in
             self.taskContainerList.append(response!)
-            self.taskTableView.reloadData()
+            DispatchQueue.main.async {
+                self.taskTableView.reloadData()
+            }
             self.taskTableView.isHidden = false
             self.removeSpinner()
         }

@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="esq-ZI-iR5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="esq-ZI-iR5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-BoldItalic.ttf">
+            <string>Poppins-BoldItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main-->
         <scene sceneID="JyY-4G-uqA">
@@ -230,7 +236,7 @@ your password reset instructions</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fL-Aa-mVN">
-                                <rect key="frame" x="115" y="668" width="185" height="23"/>
+                                <rect key="frame" x="115" y="673.5" width="185" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="rcV-9M-PBD"/>
                                 </constraints>
@@ -239,7 +245,7 @@ your password reset instructions</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ7-6g-Mh0">
-                                <rect key="frame" x="26" y="721" width="362" height="48"/>
+                                <rect key="frame" x="26" y="726.5" width="362" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="qFb-H0-do8"/>
                                 </constraints>
@@ -275,34 +281,34 @@ your password reset instructions</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vaw-Aj-knb">
-                                <rect key="frame" x="26" y="274" width="362" height="158"/>
+                                <rect key="frame" x="26" y="274" width="362" height="163.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gh-55-Zan">
-                                        <rect key="frame" x="0.0" y="0.0" width="362" height="22.5"/>
-                                        <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="28"/>
+                                        <fontDescription key="fontDescription" name="Poppins-BoldItalic" family="Poppins" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUb-8Z-yK1">
-                                        <rect key="frame" x="0.0" y="37.5" width="362" height="34"/>
+                                        <rect key="frame" x="0.0" y="43" width="362" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmv-vQ-YGL">
-                                        <rect key="frame" x="0.0" y="86.5" width="362" height="22.5"/>
+                                        <rect key="frame" x="0.0" y="92" width="362" height="22.5"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAC-c9-dwX">
-                                        <rect key="frame" x="0.0" y="124" width="362" height="34"/>
+                                        <rect key="frame" x="0.0" y="129.5" width="362" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itf-L7-bSW">
-                                <rect key="frame" x="26" y="555" width="362" height="48"/>
+                                <rect key="frame" x="26" y="560.5" width="362" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="9EF-ub-Nzv"/>
                                 </constraints>
@@ -312,7 +318,7 @@ your password reset instructions</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHv-37-acd">
-                                <rect key="frame" x="241" y="452" width="147" height="33"/>
+                                <rect key="frame" x="241" y="457.5" width="147" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="o7E-ZZ-m66"/>
                                 </constraints>
