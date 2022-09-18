@@ -13,21 +13,19 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var animationView: UIView!
     
-    var userInfoList : UserInfoList?
+    let viewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePictureUpload()
-        nameLabel.text = "Ekrem"
-        infoLabel.text = Auth.auth().currentUser?.email!
-        getUserInfo()
-    }
-    
-    func getUserInfo() {
-        WebService().getUserInfo { userInfoList in
-            print(userInfoList!)
-            self.nameLabel.text = userInfoList?.Email
+        viewModel.getUserInfo()
+        viewModel.didGetUserInfoFetched = { response in
+            DispatchQueue.main.async {
+                self.nameLabel.text = response.userName
+                self.infoLabel.text = response.userEmail
+            }
         }
     }
     

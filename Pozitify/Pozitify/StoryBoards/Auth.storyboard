@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -236,7 +237,7 @@ your password reset instructions</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fL-Aa-mVN">
-                                <rect key="frame" x="115" y="673.5" width="185" height="23"/>
+                                <rect key="frame" x="115" y="669" width="185" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="rcV-9M-PBD"/>
                                 </constraints>
@@ -245,7 +246,7 @@ your password reset instructions</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQ7-6g-Mh0">
-                                <rect key="frame" x="26" y="726.5" width="362" height="48"/>
+                                <rect key="frame" x="26" y="722" width="362" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="qFb-H0-do8"/>
                                 </constraints>
@@ -281,34 +282,34 @@ your password reset instructions</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vaw-Aj-knb">
-                                <rect key="frame" x="26" y="274" width="362" height="163.5"/>
+                                <rect key="frame" x="26" y="274" width="362" height="159"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gh-55-Zan">
-                                        <rect key="frame" x="0.0" y="0.0" width="362" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-BoldItalic" family="Poppins" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUb-8Z-yK1">
-                                        <rect key="frame" x="0.0" y="43" width="362" height="34"/>
+                                        <rect key="frame" x="0.0" y="38.5" width="362" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmv-vQ-YGL">
-                                        <rect key="frame" x="0.0" y="92" width="362" height="22.5"/>
+                                        <rect key="frame" x="0.0" y="87.5" width="362" height="22.5"/>
                                         <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAC-c9-dwX">
-                                        <rect key="frame" x="0.0" y="129.5" width="362" height="34"/>
+                                        <rect key="frame" x="0.0" y="125" width="362" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itf-L7-bSW">
-                                <rect key="frame" x="26" y="560.5" width="362" height="48"/>
+                                <rect key="frame" x="26" y="556" width="362" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="9EF-ub-Nzv"/>
                                 </constraints>
@@ -318,7 +319,7 @@ your password reset instructions</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHv-37-acd">
-                                <rect key="frame" x="241" y="457.5" width="147" height="33"/>
+                                <rect key="frame" x="241" y="453" width="147" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="o7E-ZZ-m66"/>
                                 </constraints>
@@ -373,7 +374,7 @@ your password reset instructions</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cvL-BW-okt">
-                                <rect key="frame" x="20" y="118" width="218" height="89"/>
+                                <rect key="frame" x="20" y="118" width="374" height="89"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3C-zS-jsT">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="41"/>
@@ -381,7 +382,7 @@ your password reset instructions</string>
                                             <constraint firstAttribute="width" constant="140" id="iMz-X0-eD8"/>
                                             <constraint firstAttribute="height" constant="41" id="iks-FN-IPe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="32"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -398,10 +399,6 @@ details for your new account</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="218" id="XO6-yy-VCa"/>
-                                    <constraint firstAttribute="height" constant="89" id="fla-Ic-3jn"/>
-                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQc-cE-5to">
                                 <rect key="frame" x="26" y="257" width="362" height="345"/>
@@ -454,12 +451,11 @@ details for your new account</string>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe7-0b-eSJ">
                                 <rect key="frame" x="26" y="705" width="362" height="48"/>
+                                <color key="backgroundColor" name="MainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="LvF-YM-EER"/>
                                 </constraints>
-                                <state key="normal" image="SignUpGreenButton">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
+                                <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signupClicked:" destination="esq-ZI-iR5" eventType="touchUpInside" id="hie-Hf-jNO"/>
                                 </connections>
@@ -508,6 +504,7 @@ details for your new account</string>
                             <constraint firstItem="LIj-DL-kHX" firstAttribute="top" secondItem="qe7-0b-eSJ" secondAttribute="bottom" constant="40" id="Dyh-Bv-Q70"/>
                             <constraint firstItem="qe7-0b-eSJ" firstAttribute="leading" secondItem="7gx-bA-eSL" secondAttribute="leading" constant="26" id="NJ6-74-5fM"/>
                             <constraint firstItem="qe7-0b-eSJ" firstAttribute="top" secondItem="iYE-Ja-e74" secondAttribute="bottom" constant="28" id="Uyc-gi-2Bj"/>
+                            <constraint firstItem="7gx-bA-eSL" firstAttribute="trailing" secondItem="cvL-BW-okt" secondAttribute="trailing" constant="20" id="XOs-na-t0H"/>
                             <constraint firstItem="LIj-DL-kHX" firstAttribute="leading" secondItem="7gx-bA-eSL" secondAttribute="leading" constant="26" id="bqZ-Jb-pi3"/>
                             <constraint firstItem="7gx-bA-eSL" firstAttribute="trailing" secondItem="WQc-cE-5to" secondAttribute="trailing" constant="26" id="cpa-xE-3Nc"/>
                             <constraint firstItem="iYE-Ja-e74" firstAttribute="leading" secondItem="7gx-bA-eSL" secondAttribute="leading" constant="26" id="dD0-Wv-FDs"/>
@@ -635,10 +632,12 @@ details for your new account</string>
         <image name="LoginWhiteButton" width="331" height="52"/>
         <image name="ResetPasswordBg" width="375" height="812"/>
         <image name="SendRequestButton" width="327" height="48"/>
-        <image name="SignUpGreenButton" width="327" height="48"/>
         <image name="SignUpWhiteButton" width="331" height="52"/>
         <image name="SuccessfulBg" width="375" height="812"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <namedColor name="MainColor">
+            <color red="0.77600002288818359" green="0.92199999094009399" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

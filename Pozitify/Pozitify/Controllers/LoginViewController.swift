@@ -16,10 +16,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        conf()
+        configureUI()
+        hideKeyboardWhenTappedAround()
     }
     
-    func conf() {
+    func configureUI() {
         emailTextField.addBottomBorder()
         passwordTextField.addBottomBorder()
     }
@@ -42,16 +43,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func signUpClicked(_ sender: Any) {
         loadScreen(name: "Auth", identifier: "signUpVC")
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        emailTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-        return(true)
     }
 }
 

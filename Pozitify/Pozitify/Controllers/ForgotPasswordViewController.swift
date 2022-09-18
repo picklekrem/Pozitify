@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ForgotPasswordViewController: UIViewController {
     
@@ -17,8 +18,14 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBAction func sendRequestClicked(_ sender: Any) {
         if forgotEmailText.text == "" {
-            makeAlert(titleInput: "Oh No", messageInput: "Please enter your e-mail")
+            makeAlert(titleInput: "Hata!", messageInput: "Lütfen geçerli bir e-mail adresi giriniz")
+        } else {
+            Auth.auth().sendPasswordReset(withEmail: forgotEmailText.text!) { error in
+                if error != nil {
+                    self.makeAlert(titleInput: "Hata", messageInput: error?.localizedDescription ?? "Tekrar deneyiniz.")
+                }
+                self.makeAlert(titleInput: "Başarılı", messageInput: "Emailinize sıfırlama maili gönderilmiştir.")
+            }
         }
-        performSegue(withIdentifier: "toResetPassword", sender: nil)
     }
 }

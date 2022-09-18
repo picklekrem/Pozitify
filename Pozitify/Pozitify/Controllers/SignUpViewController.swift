@@ -10,7 +10,7 @@ import Firebase
 
 class SignUpViewController: UIViewController {
     
-    let firestoredatabase = Firestore.firestore()
+    let firestoreDatabase = Firestore.firestore()
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var fullNameTextField: UITextField!
@@ -21,10 +21,11 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        conf()
+        configureUI()
+        hideKeyboardWhenTappedAround()
     }
     
-    func conf() {
+    func configureUI() {
         emailTextField.addBottomBorder()
         fullNameTextField.addBottomBorder()
         passwordTextField.addBottomBorder()
@@ -39,15 +40,16 @@ class SignUpViewController: UIViewController {
                     if error != nil {
                         self.makeAlert(titleInput: "Error!", messageInput: error?.localizedDescription ?? "Please try again")
                     }else {
-                        let userDictionary = ["Email" : self.emailTextField.text!,"Full Name" : self.fullNameTextField.text!, "Password" : self.passwordTextField.text!] as [String : Any]
-                        self.firestoredatabase.collection("Users").document(Auth.auth().currentUser!.email!).setData(userDictionary)
-                        //self.performSegue(withIdentifier: "toSettingUp", sender: nil)
+                        let userDictionary = ["userEmail" : self.emailTextField.text!,"userName" : self.fullNameTextField.text!, "userPassword" : self.passwordTextField.text!, "totalTaskComplete" : 0, "totalPoints" : 0] as [String : Any]
+                        self.firestoreDatabase.collection("Users").document(Auth.auth().currentUser!.email!).setData(userDictionary)
                         self.loadScreen(name: "Auth", identifier: "settingUpVC")
                     }
                 }
             } else {
                 makeAlert(titleInput: "Passwords doesnt match!", messageInput: "please enter same passwords.")
             }
+        } else {
+            makeAlert(titleInput: "Hata!", messageInput: "Lütfen bütün boşlukları doldurunuz.")
         }
     }
 
@@ -58,29 +60,25 @@ class SignUpViewController: UIViewController {
     @IBAction func termsButton(_ sender: UISwitch) {
         if (sender.isOn == false) {
             signUpButton.isEnabled = false
-        }
-        else {
+        } else {
             signUpButton.isEnabled = true
         }
     }
     
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        emailTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-        fullNameTextField.resignFirstResponder()
-        passwordAgainTextField.resignFirstResponder()
-        return(true)
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
+//
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        emailTextField.resignFirstResponder()
+//        passwordTextField.resignFirstResponder()
+//        fullNameTextField.resignFirstResponder()
+//        passwordAgainTextField.resignFirstResponder()
+//        return(true)
+//    }
 }
 
 class SettingUpProfileViewController : UIViewController {
-    
-    let firestoredatabase = Firestore.firestore()
     
     @IBOutlet weak var profileImageView: UIImageView!
     

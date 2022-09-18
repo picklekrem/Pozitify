@@ -10,7 +10,7 @@ import Firebase
 
 class IdeasViewController: UIViewController, UITextViewDelegate {
     
-    let firestoredatabase = Firestore.firestore()
+    let firestoreDatabase = Firestore.firestore()
     
     @IBOutlet var backView: UIView!
     @IBOutlet var ideasView: UIView!
@@ -19,10 +19,8 @@ class IdeasViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         configureUI()
-        let defaults = UserDefaults.standard
-//        let myarray = defaults.object(forKey: "myKey") as! [String : String]
-        let deneme = defaults.dictionary(forKey: "myKey")
     }
     
     func configureUI() {
@@ -51,27 +49,20 @@ class IdeasViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        titleTextView.resignFirstResponder()
-        return(true)
-    }
-    
     @IBAction func submitButtonClicked(_ sender: Any) {
-        
-        let ideaPost = ["Idea" : titleTextView.text!, "Email" : Auth.auth().currentUser?.email!] as [String : Any]
-        firestoredatabase.collection("Ideas").addDocument(data: ideaPost) { error in
-            if error != nil {
-                self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error" )
-            } else {
-                self.makeAlert(titleInput: "Thank you! :)", messageInput: "Thanks for your kind idea :)")
-                self.titleTextView.text = ""
-                self.tabBarController?.selectedIndex = 0
+        if titleTextView.text == "" || titleTextView.text == "Tell us the things that makes you happy in your daily life so we can share them with other people!" {
+            self.makeAlert(titleInput: "Hata!", messageInput: "Idea part cannot be sent empty, please type your idea and sent again")
+        } else {
+            let ideaPost = ["Idea" : titleTextView.text!, "Email" : Auth.auth().currentUser?.email!] as [String : Any]
+            firestoreDatabase.collection("Ideas").addDocument(data: ideaPost) { error in
+                if error != nil {
+                    self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error" )
+                } else {
+                    self.makeAlert(titleInput: "Thank you! :)", messageInput: "Thanks for your kind idea :)")
+                    self.titleTextView.text = ""
+                    self.tabBarController?.selectedIndex = 0
+                }
             }
         }
-        
     }
 }

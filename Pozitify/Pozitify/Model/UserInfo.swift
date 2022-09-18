@@ -6,8 +6,11 @@
 //
 
 import Foundation
+
 struct UserInfoList : Codable {
-    let FullName : String?
-    let Email : String?
-    let Password : String?
+    let userName : String?
+    let userEmail : String?
+    let userPassword : String?
+    let totalTaskComplete : Int?
+    let totalPoints : Int?
 }

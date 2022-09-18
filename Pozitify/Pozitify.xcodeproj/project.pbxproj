@@ -54,6 +54,8 @@
 		B9CAC05C2863254500840A2D /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CAC04F2863254400840A2D /* Roboto-Black.ttf */; };
 		EA3D6E2A26B7F90D007B1307 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D6E2926B7F90D007B1307 /* WebService.swift */; };
 		EA3D6E2D26B7FE95007B1307 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */; };
+		EA661F882873670100EDF165 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA661F872873670100EDF165 /* TasksViewModel.swift */; };
+		EA661F8A28736AB500EDF165 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA661F8928736AB500EDF165 /* ProfileViewModel.swift */; };
 		EA8724992668E73900D3722F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8724982668E73900D3722F /* LoginViewController.swift */; };
 		EA87249B2668E79300D3722F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA87249A2668E79300D3722F /* SignUpViewController.swift */; };
 		EAC4053326664D6600BA0D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC4053226664D6600BA0D81 /* AppDelegate.swift */; };
@@ -119,6 +121,8 @@
 		B9CAC04F2863254400840A2D /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		EA3D6E2926B7F90D007B1307 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		EA661F872873670100EDF165 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
+		EA661F8928736AB500EDF165 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		EA8724982668E73900D3722F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA87249A2668E79300D3722F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EAC4052F26664D6600BA0D81 /* Pozitify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pozitify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +264,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EA661F86287366DF00EDF165 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EA661F872873670100EDF165 /* TasksViewModel.swift */,
+				EA661F8928736AB500EDF165 /* ProfileViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		EAC4052626664D6600BA0D81 = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +299,7 @@
 				B9A8DB48266907C500BE72DA /* Utils */,
 				B93E874E2666884700B6B1CC /* StoryBoards */,
 				EAC4054726664E8200BA0D81 /* Controllers */,
+				EA661F86287366DF00EDF165 /* ViewModels */,
 				EAC4054626664E7B00BA0D81 /* Cells */,
 				EAC4053226664D6600BA0D81 /* AppDelegate.swift */,
 				EAC4053426664D6600BA0D81 /* SceneDelegate.swift */,
@@ -490,12 +504,14 @@
 				B99B3D4826B945D000FBC5D9 /* WalkthroughViewController.swift in Sources */,
 				EA3D6E2D26B7FE95007B1307 /* UserInfo.swift in Sources */,
 				EAC4053326664D6600BA0D81 /* AppDelegate.swift in Sources */,
+				EA661F8A28736AB500EDF165 /* ProfileViewModel.swift in Sources */,
 				B91A187526B8107400D9526B /* ForgotPasswordViewController.swift in Sources */,
 				B99B3D5426B965E200FBC5D9 /* Constant.swift in Sources */,
 				EA87249B2668E79300D3722F /* SignUpViewController.swift in Sources */,
 				EAC4054B26664EAE00BA0D81 /* IdeasViewController.swift in Sources */,
 				B99B3D4E26B9466800FBC5D9 /* DemoPageViewController.swift in Sources */,
 				EAC4053526664D6600BA0D81 /* SceneDelegate.swift in Sources */,
+				EA661F882873670100EDF165 /* TasksViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

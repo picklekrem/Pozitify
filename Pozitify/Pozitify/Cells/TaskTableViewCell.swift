@@ -19,7 +19,8 @@ class TaskTableViewCell: UITableViewCell {
         return UINib(nibName: "TaskTableViewCell", bundle: nil)
     }
     
-    var check : Bool? = false
+    var detailData : TaskContainerList?
+    var isCompletedCompletion : (Bool) -> () = {result in}
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,19 +30,30 @@ class TaskTableViewCell: UITableViewCell {
         backView.layer.masksToBounds = false
         backView.layer.cornerRadius = 4.0
 
+        checkButton.isUserInteractionEnabled = false
+    }
+    
+    func loadData(data : TaskContainerList) {
+        detailData = data
+        taskTitleLabel.text = data.taskTitle
+        taskTextLabel.text = data.taskInfo
+        DispatchQueue.main.async {
+            if data.isComplete {
+                self.setSelected(true, animated: true)
+            }
+        }
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-    
-    @IBAction func checkButtonClicked(_ sender: Any) {
-        if check == false {
+        if selected {
             checkButton.setImage(UIImage(named: "SelectedButton"), for: .normal)
-            check = true
+            self.isCompletedCompletion(true)
         } else {
             checkButton.setImage(UIImage(named: "UnselectedButton"), for: .normal)
-            check = false
+            self.isCompletedCompletion(false)
         }
     }
+    
 }

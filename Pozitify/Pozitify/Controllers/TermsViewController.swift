@@ -15,7 +15,7 @@ class TermsViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+//        terms bul
         termsView.navigationDelegate = self
         let url = URL(string: Constants.termsLinkUrl)!
         termsView.load(URLRequest(url: url))

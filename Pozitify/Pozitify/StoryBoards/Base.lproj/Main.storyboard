@@ -63,7 +63,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="r5D-Dd-RzU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Submit!">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -112,44 +112,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7q-8c-eYn">
-                                <rect key="frame" x="154" y="627" width="106" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="log out"/>
-                                <connections>
-                                    <action selector="logOutClicked:" destination="4ii-7c-2Nx" eventType="touchUpInside" id="cCP-Vd-Y3j"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWV-OK-msO">
-                                <rect key="frame" x="269" y="157" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hWV-OK-msO">
+                                <rect key="frame" x="294" y="157.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5AH-41-8rQ"/>
+                                    <constraint firstAttribute="width" constant="100" id="ZaD-VO-inj"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDb-nY-30G">
-                                <rect key="frame" x="20" y="157" width="241" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDb-nY-30G">
+                                <rect key="frame" x="29" y="157.5" width="236" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="St1-5M-HNB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH8-Nv-QGy">
-                                <rect key="frame" x="19" y="210" width="241" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH8-Nv-QGy">
+                                <rect key="frame" x="20" y="215.5" width="254" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zXY-Ek-NNT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oyd-Gr-cBW">
+                                <rect key="frame" x="20" y="298" width="374" height="529"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yb0-HU-SeX"/>
                         <color key="backgroundColor" name="MainColor"/>
+                        <constraints>
+                            <constraint firstItem="LH8-Nv-QGy" firstAttribute="leading" secondItem="Yb0-HU-SeX" secondAttribute="leading" constant="20" id="22x-YP-v16"/>
+                            <constraint firstItem="hWV-OK-msO" firstAttribute="top" secondItem="Yb0-HU-SeX" secondAttribute="top" constant="12" id="6mf-GS-Atj"/>
+                            <constraint firstItem="hWV-OK-msO" firstAttribute="leading" secondItem="LH8-Nv-QGy" secondAttribute="trailing" constant="20" id="70J-aH-z7C"/>
+                            <constraint firstItem="Yb0-HU-SeX" firstAttribute="trailing" secondItem="hWV-OK-msO" secondAttribute="trailing" constant="20" id="P2G-W3-qx3"/>
+                            <constraint firstItem="hWV-OK-msO" firstAttribute="leading" secondItem="nDb-nY-30G" secondAttribute="trailing" constant="29" id="c9H-A3-4cs"/>
+                            <constraint firstItem="nDb-nY-30G" firstAttribute="leading" secondItem="Yb0-HU-SeX" secondAttribute="leading" constant="29" id="cKX-g1-FBc"/>
+                            <constraint firstItem="nDb-nY-30G" firstAttribute="top" secondItem="Yb0-HU-SeX" secondAttribute="top" constant="12" id="cgw-5P-ioW"/>
+                            <constraint firstItem="LH8-Nv-QGy" firstAttribute="top" secondItem="nDb-nY-30G" secondAttribute="bottom" constant="8" id="wLy-w1-3zi"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Profile" id="MgL-L6-BHh">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="power" catalog="system" style="done" id="nnl-KU-VjI">
                             <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="logOutClicked:" destination="4ii-7c-2Nx" id="JsT-JB-suY"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="animationView" destination="Oyd-Gr-cBW" id="a48-Gh-iF6"/>
                         <outlet property="infoLabel" destination="LH8-Nv-QGy" id="BDr-FT-9uu"/>
                         <outlet property="nameLabel" destination="nDb-nY-30G" id="Hft-ad-TQD"/>
                         <outlet property="profileImageView" destination="hWV-OK-msO" id="tfJ-aq-y5b"/>
@@ -188,13 +206,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OSY-Vf-Bq3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OSY-Vf-Bq3">
                                 <rect key="frame" x="0.0" y="145.5" width="414" height="667.5"/>
                                 <color key="backgroundColor" name="MainColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="8GN-I9-YE0" id="hSn-3g-N1a"/>
-                                    <outlet property="delegate" destination="8GN-I9-YE0" id="IaB-s8-YMN"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QiP-7h-FDN"/>

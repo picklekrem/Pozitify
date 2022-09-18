@@ -9,6 +9,8 @@ import Foundation
 
 
 struct TaskContainerList: Codable {
-    let Title : String
-    let Task : String
+    let taskTitle : String
+    let taskInfo : String
+    let taskId : String
+    var isComplete : Bool
 }
