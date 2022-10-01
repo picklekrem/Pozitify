@@ -13,4 +13,12 @@ struct TaskContainerList: Codable {
     let taskInfo : String
     let taskId : String
     var isComplete : Bool
+    
+//    init(taskTitle : String, taskInfo : String, taskId : String, isComplete : Bool) {
+//        self.taskTitle = taskTitle
+//        self.taskInfo = taskInfo
+//        self.taskId = taskId
+//        self.isComplete = isComplete
+//    }
 }
+

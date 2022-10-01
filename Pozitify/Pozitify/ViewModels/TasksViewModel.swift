@@ -9,17 +9,30 @@ import UIKit
 import Firebase
 
 class TasksViewModel: NSObject {
+    let webService = WebService()
     let taskSize = 3
     var taskContainerList : [TaskContainerList] = []
     var didTasksGetFetched : () -> () = {}
     func getData() {
-        WebService().getTaskData { response in
-            guard let response = response else {
-                return
+//        WebService().getTaskData { response in
+//            guard let response = response else {
+//                return
+//            }
+//            self.taskContainerList.append(response)
+//            self.didTasksGetFetched()
+//        }
+        webService.shared.getTaskData { response in
+            switch response {
+            case .success(let tasks):
+                guard let tasks = tasks else {return}
+                self.taskContainerList.append(tasks)
+                self.didTasksGetFetched()
+            case .failure(let error):
+                print(error.localizedDescription)
             }
-            self.taskContainerList.append(response)
-            self.didTasksGetFetched()
         }
+        
+//        will fetched from profile
     }
 }
 

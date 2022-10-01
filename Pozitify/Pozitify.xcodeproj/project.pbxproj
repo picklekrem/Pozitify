@@ -77,7 +77,7 @@
 		8195D060D770DBA667DDB69A /* Pods-Pozitify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pozitify.release.xcconfig"; path = "Target Support Files/Pods-Pozitify/Pods-Pozitify.release.xcconfig"; sourceTree = "<group>"; };
 		B91A187426B8107400D9526B /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		B91A187626B817A800D9526B /* ImagePicker+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImagePicker+Ext.swift"; sourceTree = "<group>"; };
-		B91A187826B818BE00D9526B /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		B91A187826B818BE00D9526B /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskList.swift; path = ../Utils/TaskList.swift; sourceTree = "<group>"; };
 		B93E874F2666886600B6B1CC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B99B3D4726B945D000FBC5D9 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		B99B3D4B26B9462F00FBC5D9 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
@@ -178,7 +178,6 @@
 				B9CAC01A286324DF00840A2D /* Fonts */,
 				B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */,
 				B91A187626B817A800D9526B /* ImagePicker+Ext.swift */,
-				B91A187826B818BE00D9526B /* TaskList.swift */,
 				B99B3D5326B965E200FBC5D9 /* Constant.swift */,
 			);
 			path = Utils;
@@ -260,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */,
+				B91A187826B818BE00D9526B /* TaskList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,19 +324,27 @@
 		EAC4054726664E8200BA0D81 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EA8724982668E73900D3722F /* LoginViewController.swift */,
-				EA87249A2668E79300D3722F /* SignUpViewController.swift */,
+				EAFDFB5128E8441C0038336C /* AuthViewControllers */,
 				EAC4054826664E9C00BA0D81 /* TasksViewController.swift */,
 				EAC4054A26664EAE00BA0D81 /* IdeasViewController.swift */,
 				EAC4054C26664EBB00BA0D81 /* ProfileViewController.swift */,
-				B91A187426B8107400D9526B /* ForgotPasswordViewController.swift */,
 				B99B3D4726B945D000FBC5D9 /* WalkthroughViewController.swift */,
 				B99B3D4B26B9462F00FBC5D9 /* CustomPageViewController.swift */,
 				B99B3D4D26B9466800FBC5D9 /* DemoPageViewController.swift */,
 				B99B3D5126B9656A00FBC5D9 /* TermsViewController.swift */,
-				B9A04A1D26BDB2E0003C4540 /* ResetPasswordViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EAFDFB5128E8441C0038336C /* AuthViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9A04A1D26BDB2E0003C4540 /* ResetPasswordViewController.swift */,
+				B91A187426B8107400D9526B /* ForgotPasswordViewController.swift */,
+				EA8724982668E73900D3722F /* LoginViewController.swift */,
+				EA87249A2668E79300D3722F /* SignUpViewController.swift */,
+			);
+			path = AuthViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

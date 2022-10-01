@@ -12,15 +12,23 @@ class WebService {
     let firestoreDatabase = Firestore.firestore()
     let decoder = JSONDecoder()
     let userEmail = Auth.auth().currentUser?.email
+    let shared = WebService()
     
-    func getUserInfo(completion : @escaping (UserInfoList?) -> ()) {
+    enum APIError : Error {
+        case failedToGetData
+    }
+    
+    func getUserInfo(completion : @escaping (Result<UserInfoList?, Error>) -> ()) {
         firestoreDatabase.collection("Users").document("\(userEmail!)").getDocument { querySnapshot, error in
-            if let error = error {print(error.localizedDescription)}
+            if let error = error {
+                print(error.localizedDescription)
+                completion(.failure(APIError.failedToGetData))
+            }
             else {
                 do {
                     let jsonData = try? JSONSerialization.data(withJSONObject: querySnapshot!.data() ?? "")
                     let userModel = try self.decoder.decode(UserInfoList.self, from: jsonData!)
-                    completion(userModel)
+                    completion(.success(userModel))
                 } catch let err {
                     print(err)
                 }
@@ -28,17 +36,18 @@ class WebService {
         }
     }
     
-    func getTaskData(completion : @escaping (TaskContainerList?) -> ()) {
+    func getTaskData(completion : @escaping (Result <TaskContainerList?, Error>) -> ()) {
         firestoreDatabase.collection("Tasks").getDocuments { querySnapshot, error in
             if let error = error {
                 print(error.localizedDescription)
+                completion(.failure(APIError.failedToGetData))
             } else {
                 for document in querySnapshot!.documents {
                     do {
                         let jsonData = try? JSONSerialization.data(withJSONObject: document.data())
                         let taskModel = try self.decoder.decode(TaskContainerList.self, from: jsonData!)
                         print(taskModel)
-                        completion(taskModel)
+                        completion(.success(taskModel))
                     } catch let err {
                         print(err)
                     }
