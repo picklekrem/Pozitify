@@ -12,7 +12,6 @@ class WebService {
     let firestoreDatabase = Firestore.firestore()
     let decoder = JSONDecoder()
     let userEmail = Auth.auth().currentUser?.email
-    let shared = WebService()
     
     enum APIError : Error {
         case failedToGetData
@@ -36,23 +35,48 @@ class WebService {
         }
     }
     
-    func getTaskData(completion : @escaping (Result <TaskContainerList?, Error>) -> ()) {
+    func getTaskData(completion : @escaping (Result <[TaskContainerList]?, Error>) -> ()) {
         firestoreDatabase.collection("Tasks").getDocuments { querySnapshot, error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(APIError.failedToGetData))
             } else {
+                var tasks : [TaskContainerList] = []
                 for document in querySnapshot!.documents {
                     do {
                         let jsonData = try? JSONSerialization.data(withJSONObject: document.data())
                         let taskModel = try self.decoder.decode(TaskContainerList.self, from: jsonData!)
-                        print(taskModel)
-                        completion(.success(taskModel))
+                        tasks.append(taskModel)
+                       
                     } catch let err {
                         print(err)
                     }
                 }
+                completion(.success(tasks))
             }
         }
     }
+    func getTaskDataFromProfile(completion : @escaping (Result <[TaskContainerList]?, Error>) -> ()) {
+        let user = Auth.auth().currentUser!.email!
+        firestoreDatabase.collection("Users").document(user).collection("CurrentTasks").getDocuments { querySnapshot, error in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(.failure(APIError.failedToGetData))
+            } else {
+                var tasks : [TaskContainerList] = []
+                for document in querySnapshot!.documents {
+                    do {
+                        let jsonData = try? JSONSerialization.data(withJSONObject: document.data())
+                        let taskModel = try self.decoder.decode(TaskContainerList.self, from: jsonData!)
+                        tasks.append(taskModel)
+                       
+                    } catch let err {
+                        print(err)
+                    }
+                }
+                completion(.success(tasks))
+            }
+        }
+    }
+    
 }

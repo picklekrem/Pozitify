@@ -11,9 +11,7 @@ import Firebase
 class SignUpViewController: UIViewController {
     
     let firestoreDatabase = Firestore.firestore()
-    private var tasks : TaskContainerList?
-    let webService = WebService()
-    
+   
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -28,17 +26,6 @@ class SignUpViewController: UIViewController {
         hideKeyboardWhenTappedAround()
     }
     
-    func getTasksData() {
-        webService.shared.getTaskData { response in
-            switch response {
-            case .success(let tasks):
-                self.tasks = tasks
-                print(tasks)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
     
     func configureUI() {
         emailTextField.addBottomBorder()
@@ -56,8 +43,8 @@ class SignUpViewController: UIViewController {
                         self.makeAlert(titleInput: "Error!", messageInput: error?.localizedDescription ?? "Please try again")
                     }else {
 //                        FAZ2 - TOTAL POINTS ADD
-//                        let userDictionary = ["userEmail" : self.emailTextField.text!,"userName" : self.fullNameTextField.text!, "userPassword" : self.passwordTextField.text!, "totalTaskComplete" : 0, "Tasks" : "", "ideaCount" : 0] as [String : Any]
-//                        self.firestoreDatabase.collection("Users").document(Auth.auth().currentUser!.email!).setData(userDictionary)
+                        let userDictionary = ["userEmail" : self.emailTextField.text!,"userName" : self.fullNameTextField.text!, "userPassword" : self.passwordTextField.text!, "totalTaskComplete" : 0, "ideaCount" : 0] as [String : Any]
+                        self.firestoreDatabase.collection("Users").document(Auth.auth().currentUser!.email!).setData(userDictionary)
                         self.loadScreen(name: "Auth", identifier: "settingUpVC")
                     }
                 }
@@ -85,14 +72,76 @@ class SignUpViewController: UIViewController {
 class SettingUpProfileViewController : UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
+    private var tasks : TaskContainerList?
+    let firestoreDatabase = Firestore.firestore()
+    let userOnline = Auth.auth().currentUser!.email!
+    let webService = WebService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
         profileImageView.addGestureRecognizer(gestureRecognizer)
-        profileImageView.roundedImage() 
+        profileImageView.roundedImage()
+        getTasksData()
     }
+    
+    func getTasksData() {
+        webService.getTaskData { response in
+            switch response {
+            case .success(let tasks):
+                var userDictionary = [:] as [String : Any]
+                guard let tasks = tasks else {return}
+//                self.createRandomTaskList(tasks: tasks)
+                
+                let randomTasks = tasks.choose(3)
+                
+                do {
+                    tasks.forEach({ x in
+                        userDictionary["taskInfo"] = x.taskInfo
+                        userDictionary["taskId"] = x.taskId
+                        userDictionary["taskTitle"] = x.taskTitle
+                        userDictionary["isComplete"] = x.isComplete
+                        
+                        self.firestoreDatabase.collection("Users").document(self.userOnline).collection("Tasks").document(x.taskId).setData(userDictionary)
+                        if randomTasks[0].taskId == x.taskId || randomTasks[1].taskId == x.taskId || randomTasks[2].taskId == x.taskId {
+                            let date = Date()
+                            userDictionary["createdDate"] = date.dateToString()
+                            self.firestoreDatabase.collection("Users").document(self.userOnline).collection("CurrentTasks").document(x.taskId).setData(userDictionary)
+                        } else {
+                            self.firestoreDatabase.collection("Users").document(self.userOnline).collection("WaitingTasks").document(x.taskId).setData(userDictionary)
+                        }
+                    })
+                } catch let error {
+                    print("Error from Firestore: \(error)")
+                }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+//    func createRandomTaskList (tasks : [TaskContainerList]) {
+//        let randomTasks = tasks.choose(3)
+//        var userDictionary = [:] as [String : Any]
+//        randomTasks.forEach { x in
+//
+//            userDictionary["taskInfo"] = x.taskInfo
+//            userDictionary["taskId"] = x.taskId
+//            userDictionary["taskTitle"] = x.taskTitle
+//            userDictionary["isComplete"] = x.isComplete
+//
+//            self.firestoreDatabase.collection("Users").document(self.userOnline).collection("CurrentTasksFunction").document(x.taskId).setData(userDictionary)
+//
+//            randomTasks.filter { word in
+//                if x.taskId == word.taskId {
+//                    self.firestoreDatabase.collection("Users").document(self.userOnline).collection("CurrentTasksFilter").document(x.taskId).setData(userDictionary)
+//                }
+//                return true
+//            }
+//        }
+//    }
     
     @objc func chooseImage(){
         let pickerController = UIImagePickerController()
@@ -104,5 +153,34 @@ class SettingUpProfileViewController : UIViewController {
     
     @IBAction func doneButtonClicked(_ sender: Any) {
         loadScreen(name: "Main", identifier: "tabBar")
+    }
+}
+
+extension RangeReplaceableCollection {
+    // Returns a new Collection shuffled
+    var shuffled: Self { .init(shuffled()) }
+    // Shuffles this Collection in place
+    @discardableResult
+    mutating func shuffledInPlace() -> Self  {
+        self = shuffled
+        return self
+    }
+    func choose(_ n: Int) -> SubSequence { shuffled.prefix(n) }
+}
+
+extension Date {
+    func dateToString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
+        let date = dateFormatter.string(from: self)
+        return date
+    }
+}
+extension String {
+    func stringToDate () -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
+        return dateFormatter.date(from: self)!
+        
     }
 }

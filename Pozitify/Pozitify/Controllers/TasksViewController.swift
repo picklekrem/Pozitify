@@ -23,7 +23,7 @@ class TasksViewController: UIViewController {
         taskTableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.identifier)
         showSpinner()
         taskTableView.isHidden = true
-        viewModel.getData()
+        viewModel.getTasksDataFromProfile()
         viewModel.didTasksGetFetched = {
             DispatchQueue.main.async {
                 self.taskTableView.reloadData()
@@ -31,5 +31,13 @@ class TasksViewController: UIViewController {
                 self.removeSpinner()
             }
         }
+    }
+}
+
+extension Date {
+    func timeAgoDisplay() -> String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        return formatter.localizedString(for: self, relativeTo: Date())
     }
 }

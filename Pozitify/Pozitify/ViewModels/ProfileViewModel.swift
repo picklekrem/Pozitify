@@ -17,7 +17,7 @@ class ProfileViewModel: NSObject {
 //                return
 //            }
 //            self.didGetUserInfoFetched(userInfoList)
-        webService.shared.getUserInfo { response in
+        webService.getUserInfo { response in
             switch response {
             case.success(let userInfoList):
                 guard let userInfoList = userInfoList else {return}
