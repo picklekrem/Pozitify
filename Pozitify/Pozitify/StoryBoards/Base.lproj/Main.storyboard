@@ -96,6 +96,7 @@
                     <connections>
                         <outlet property="backView" destination="QgD-ew-qXp" id="cOg-oK-G6Q"/>
                         <outlet property="ideasView" destination="BEH-Xz-I6e" id="5kS-Wp-V2p"/>
+                        <outlet property="shareLabel" destination="tyT-Sa-edD" id="e5c-OO-FSN"/>
                         <outlet property="submitButton" destination="C23-yD-ocq" id="HBM-26-dV9"/>
                         <outlet property="titleTextView" destination="PDp-fk-bGE" id="A0w-dc-Nq2"/>
                     </connections>
@@ -158,10 +159,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Profile" id="MgL-L6-BHh">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="power" catalog="system" style="done" id="nnl-KU-VjI">
-                            <color key="tintColor" systemColor="systemRedColor"/>
+                        <barButtonItem key="rightBarButtonItem" image="gear" catalog="system" style="done" id="nnl-KU-VjI">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="logOutClicked:" destination="4ii-7c-2Nx" id="JsT-JB-suY"/>
+                                <segue destination="cJI-gH-bKX" kind="show" id="yct-9o-bmm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -176,6 +178,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbN-A8-L5l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1311.5942028985507" y="1350.6696428571429"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="fgx-M3-3WC">
+            <objects>
+                <viewController id="cJI-gH-bKX" customClass="SettingsViewController" customModule="Pozitify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tTT-av-kvB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UDY-s2-sMP">
+                                <rect key="frame" x="0.0" y="145.5" width="414" height="750.5"/>
+                                <color key="backgroundColor" name="MainColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cJI-gH-bKX" id="ck4-DW-wHn"/>
+                                    <outlet property="delegate" destination="cJI-gH-bKX" id="OPL-Pf-1p3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rPR-bs-fXn"/>
+                        <color key="backgroundColor" name="MainColor"/>
+                        <constraints>
+                            <constraint firstItem="UDY-s2-sMP" firstAttribute="leading" secondItem="rPR-bs-fXn" secondAttribute="leading" id="Eai-Kl-1AU"/>
+                            <constraint firstAttribute="bottom" secondItem="UDY-s2-sMP" secondAttribute="bottom" id="Wxz-Qs-inF"/>
+                            <constraint firstItem="UDY-s2-sMP" firstAttribute="trailing" secondItem="rPR-bs-fXn" secondAttribute="trailing" id="fSx-fv-CXy"/>
+                            <constraint firstItem="UDY-s2-sMP" firstAttribute="top" secondItem="rPR-bs-fXn" secondAttribute="top" id="r0q-Vl-kAd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="MdQ-nU-9fr"/>
+                    <connections>
+                        <outlet property="settingsTableView" destination="UDY-s2-sMP" id="GLf-H2-yq8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yef-HG-MDZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2173.913043478261" y="1350.6696428571429"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="veq-P3-QVP">
@@ -304,7 +341,7 @@
         <image name="Love Book" width="24" height="24"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="power" catalog="system" width="128" height="124"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <namedColor name="MainColor">
             <color red="0.77600002288818359" green="0.92199999094009399" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -316,9 +353,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -17,12 +17,14 @@ class TasksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "tasks_title".localized
         taskTableView.delegate = viewModel
         taskTableView.dataSource = viewModel
         
         taskTableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.identifier)
         showSpinner()
         taskTableView.isHidden = true
+        
         viewModel.getTasksDataFromProfile()
         viewModel.didTasksGetFetched = {
             DispatchQueue.main.async {

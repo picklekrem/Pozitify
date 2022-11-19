@@ -11,14 +11,14 @@ import Firebase
 class WebService {
     let firestoreDatabase = Firestore.firestore()
     let decoder = JSONDecoder()
-    let userEmail = Auth.auth().currentUser?.email
+    let userEmail = Auth.auth().currentUser!.email!
     
     enum APIError : Error {
         case failedToGetData
     }
     
     func getUserInfo(completion : @escaping (Result<UserInfoList?, Error>) -> ()) {
-        firestoreDatabase.collection("Users").document("\(userEmail!)").getDocument { querySnapshot, error in
+        firestoreDatabase.collection("Users").document(userEmail).getDocument { querySnapshot, error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(APIError.failedToGetData))
@@ -56,9 +56,8 @@ class WebService {
             }
         }
     }
-    func getTaskDataFromProfile(completion : @escaping (Result <[TaskContainerList]?, Error>) -> ()) {
-        let user = Auth.auth().currentUser!.email!
-        firestoreDatabase.collection("Users").document(user).collection("CurrentTasks").getDocuments { querySnapshot, error in
+    func getTaskDataFromProfile(listName : TasksListName, completion : @escaping (Result <[TaskContainerList]?, Error>) -> ()) {
+        firestoreDatabase.collection("Users").document(userEmail).collection(listName.rawValue).getDocuments { querySnapshot, error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(APIError.failedToGetData))
@@ -69,7 +68,6 @@ class WebService {
                         let jsonData = try? JSONSerialization.data(withJSONObject: document.data())
                         let taskModel = try self.decoder.decode(TaskContainerList.self, from: jsonData!)
                         tasks.append(taskModel)
-                       
                     } catch let err {
                         print(err)
                     }
@@ -78,5 +76,4 @@ class WebService {
             }
         }
     }
-    
 }

@@ -102,6 +102,7 @@ class SettingUpProfileViewController : UIViewController {
                         userDictionary["taskId"] = x.taskId
                         userDictionary["taskTitle"] = x.taskTitle
                         userDictionary["isComplete"] = x.isComplete
+                        userDictionary["createdDate"] = ""
                         
                         self.firestoreDatabase.collection("Users").document(self.userOnline).collection("Tasks").document(x.taskId).setData(userDictionary)
                         if randomTasks[0].taskId == x.taskId || randomTasks[1].taskId == x.taskId || randomTasks[2].taskId == x.taskId {
@@ -153,34 +154,5 @@ class SettingUpProfileViewController : UIViewController {
     
     @IBAction func doneButtonClicked(_ sender: Any) {
         loadScreen(name: "Main", identifier: "tabBar")
-    }
-}
-
-extension RangeReplaceableCollection {
-    // Returns a new Collection shuffled
-    var shuffled: Self { .init(shuffled()) }
-    // Shuffles this Collection in place
-    @discardableResult
-    mutating func shuffledInPlace() -> Self  {
-        self = shuffled
-        return self
-    }
-    func choose(_ n: Int) -> SubSequence { shuffled.prefix(n) }
-}
-
-extension Date {
-    func dateToString() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
-        let date = dateFormatter.string(from: self)
-        return date
-    }
-}
-extension String {
-    func stringToDate () -> Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
-        return dateFormatter.date(from: self)!
-        
     }
 }

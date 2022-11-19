@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  Pozitify
+
+  Created by Ekrem Özkaraca on 19.11.2022.
+  
+*/
+
+//Tasks
+"tasks_title" = "Görevler";
+
+//Ideas
+"ideas_title" = "Fikirler";
+"ideas_placeholder" = "Günlük hayatınızda sizi mutlu eden şeyleri bize anlatın, biz de onları diğer insanlarla paylaşalım!";
+
+//Profile
+"profile_title" = "Profil";
+
+//Settings
+"settings_title" = "Ayarlar";
+"change_theme" = "Tema Değiştir";
+"privacy_notice" = "Aydınlatma Metni";
+"user_agreement" = "Kullanıcı Sözleşmesi";
+"log_out" = "Çıkış";
+
+//Errors
+"error" = "Hata!";
+"error_idea" = "Fikir bölümü boş kalamaz, Lütfen paylaşmak istediğiniz fikrinizi yazınız";
+"thank_you" = "Teşekkür ederiz :)";
+"thank_you_idea" = "Fikrinizi diğer insanlar ile paylaştığınız için teşekkür ederiz :)";
+"share" = "Paylaş!";
+"sumbit" = "Gönder!";

@@ -12,5 +12,5 @@ struct UserInfoList : Codable {
     let userEmail : String?
     let userPassword : String?
     let totalTaskComplete : Int?
-    let totalPoints : Int?
+    let ideaCount : Int?
 }

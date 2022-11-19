@@ -19,13 +19,20 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "profile_title".localized
         profilePictureUpload()
+        
         viewModel.getUserInfo()
+        viewModel.getUserTaskInfo()
+        
         viewModel.didGetUserInfoFetched = { response in
             DispatchQueue.main.async {
                 self.nameLabel.text = response.userName
                 self.infoLabel.text = response.userEmail
             }
+        }
+        viewModel.didTotalTaskComplete = { count in
+            print(count)
         }
     }
     

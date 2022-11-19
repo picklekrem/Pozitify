@@ -17,16 +17,16 @@ class TasksViewModel: NSObject {
     var didTasksGetFetched : () -> () = {}
     
     func getTasksDataFromProfile() {
-        webService.getTaskDataFromProfile { response in
+        webService.getTaskDataFromProfile(listName: .currentTasks) { response in
             switch response {
             case .success(let tasks):
 //                self.tasks = tasks
                 guard let tasks = tasks else {return}
                 if self.oneWeekCheck(tasks.first?.createdDate.stringToDate() ?? Date()) {
+                    self.getNewTasks(tasks: tasks)
+                } else {
                     self.taskContainerList = tasks
                     self.didTasksGetFetched()
-                } else {
-                    self.getNewTasks(tasks: tasks)
                 }
 
             case .failure(let error):
@@ -37,9 +37,9 @@ class TasksViewModel: NSObject {
     
     func oneWeekCheck (_ createdDate : Date) -> Bool {
         let today = Date()
-        let components = Calendar.current.dateComponents([.weekOfYear, .day], from: createdDate, to: today)
-        if components.weekOfYear == 1 {
-//            get newTasks
+//        productionda değiştir from to datelerin yerini
+        let components = Calendar.current.dateComponents([.weekOfYear], from: createdDate, to: today)
+        if components.weekOfYear! >= 1 {
             return true
         } else {
             return false
@@ -58,23 +58,47 @@ class TasksViewModel: NSObject {
                 taskDic["taskId"] = task.taskId
                 taskDic["taskTitle"] = task.taskTitle
                 taskDic["isComplete"] = task.isComplete
-                firestoreDatabase.collection("Users").document(userOnline).collection("WaitingTasks").document(task.taskId).updateData(taskDic)
+                taskDic["createdDate"] = ""
+                firestoreDatabase.collection("Users").document(userOnline).collection("WaitingTasks").document(task.taskId).setData(taskDic)
             }
         }
-       
-        #warning("current list'e waiting listten random 3 tane task çek")
-        
-        
-        
-        
+       generateNewTasks()
     }
     
-}
-
-//Create an Enum file and make it general and spesific
-enum TasksValue : String, CaseIterable {
-    case ideaCount = "ideaCount"
-    case userName = "userName"
+    func generateNewTasks() {
+        webService.getTaskDataFromProfile(listName: .waitingTasks) { response in
+            switch response {
+            case .success(let tasks):
+                let randomTasks = tasks?.choose(3)
+                var userDictionary = [:] as [String : Any]
+                randomTasks?.forEach({ x in
+                    userDictionary["taskInfo"] = x.taskInfo
+                    userDictionary["taskId"] = x.taskId
+                    userDictionary["taskTitle"] = x.taskTitle
+                    userDictionary["isComplete"] = x.isComplete
+                    userDictionary["createdDate"] = Date().dateToString()
+                    
+                    self.firestoreDatabase.collection("Users").document(self.userOnline).collection("CurrentTasks").document(x.taskId).setData(userDictionary)
+                    self.firestoreDatabase.collection("Users").document(self.userOnline).collection("WaitingTasks").document(x.taskId).delete()
+                    
+                })
+                self.getTasksDataFromProfile()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func didTasksComplete(isCheck : Bool, taskID : String) {
+        let taskComplete = ["isComplete" : isCheck] as [String : Any]
+        if isCheck {
+            firestoreDatabase.collection("Users").document(userOnline).collection("CurrentTasks").document(taskID).updateData(taskComplete)
+        } else {
+            firestoreDatabase.collection("Users").document(userOnline).collection("CurrentTasks").document(taskID).updateData(taskComplete)
+        }
+    }
+    
+    
 }
 
 extension TasksViewModel : UITableViewDelegate, UITableViewDataSource {
@@ -89,14 +113,11 @@ extension TasksViewModel : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(taskContainerList[indexPath.row].isComplete)
+        let taskId = taskContainerList[indexPath.row].taskId
+        didTasksComplete(isCheck: true, taskID: taskId)
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        print(taskContainerList[indexPath.row].isComplete)
+        let taskId = taskContainerList[indexPath.row].taskId
+        didTasksComplete(isCheck: false, taskID: taskId)
     }
-
 }
-//                nicely done kardeşim thats work.
-//                let userDictionary = [TasksValue.ideaCount.rawValue : 1, TasksValue.userName.rawValue : "ekrem"] as [String : Any]
-//                self.firestoreDatabase.collection("Users").document(Auth.auth().currentUser!.email!).updateData(userDictionary)
-                

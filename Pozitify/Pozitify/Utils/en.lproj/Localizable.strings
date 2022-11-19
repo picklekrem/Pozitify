@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  Pozitify
+
+  Created by Ekrem Özkaraca on 19.11.2022.
+  
+*/
+
+//Tasks
+"tasks_title" = "Tasks";
+
+//Ideas
+"ideas_title" = "Ideas";
+"ideas_placeholder" = "Tell us the things that makes you happy in your daily life so we can share them with other people!";
+
+//Profile
+"profile_title" = "Profile";
+
+//Settings
+"settings_title" = "Settings";
+"change_theme" = "Change Theme";
+"privacy_notice" = "Privacy Notice";
+"user_agreement" = "User Agreement";
+"log_out" = "Log out";
+
+//Errors
+"error" = "Error!";
+"error_idea" = "Idea part cannot be sent empty, please type your idea and sent again";
+"thank_you" = "Thank you :)";
+"thank_you_idea" = "Thanks for your kind idea :)";
+"share" = "Share!";
+"sumbit" = "Sumbit!";

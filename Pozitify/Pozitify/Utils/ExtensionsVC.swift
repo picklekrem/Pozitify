@@ -73,3 +73,37 @@ extension UITextField {
         layer.addSublayer(bottomLine)
     }
 }
+
+extension RangeReplaceableCollection {
+    // Returns a new Collection shuffled
+    var shuffled: Self { .init(shuffled()) }
+    // Shuffles this Collection in place
+    @discardableResult
+    mutating func shuffledInPlace() -> Self  {
+        self = shuffled
+        return self
+    }
+    func choose(_ n: Int) -> SubSequence { shuffled.prefix(n) }
+}
+
+extension Date {
+    func dateToString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
+        let date = dateFormatter.string(from: self)
+        return date
+    }
+}
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+    }
+    
+    func stringToDate () -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
+        return dateFormatter.date(from: self)!
+        
+    }
+}
+

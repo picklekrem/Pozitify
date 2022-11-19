@@ -20,7 +20,7 @@ class TaskTableViewCell: UITableViewCell {
     }
     
     var detailData : TaskContainerList?
-    var isCompletedCompletion : (Bool) -> () = {result in}
+//    var isCompletedCompletion : (Bool) -> () = {result in}
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -49,10 +49,10 @@ class TaskTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         if selected {
             checkButton.setImage(UIImage(named: "SelectedButton"), for: .normal)
-            self.isCompletedCompletion(true)
+//            self.isCompletedCompletion(true)
         } else {
             checkButton.setImage(UIImage(named: "UnselectedButton"), for: .normal)
-            self.isCompletedCompletion(false)
+//            self.isCompletedCompletion(false)
         }
     }
     

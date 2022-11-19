@@ -13,8 +13,6 @@
 		B91A187926B818BE00D9526B /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91A187826B818BE00D9526B /* TaskList.swift */; };
 		B93E87502666886600B6B1CC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93E874F2666886600B6B1CC /* Auth.storyboard */; };
 		B99B3D4826B945D000FBC5D9 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D4726B945D000FBC5D9 /* WalkthroughViewController.swift */; };
-		B99B3D4C26B9462F00FBC5D9 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D4B26B9462F00FBC5D9 /* CustomPageViewController.swift */; };
-		B99B3D4E26B9466800FBC5D9 /* DemoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D4D26B9466800FBC5D9 /* DemoPageViewController.swift */; };
 		B99B3D5026B9619100FBC5D9 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99B3D4F26B9619100FBC5D9 /* Walkthrough.storyboard */; };
 		B99B3D5226B9656A00FBC5D9 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D5126B9656A00FBC5D9 /* TermsViewController.swift */; };
 		B99B3D5426B965E200FBC5D9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B3D5326B965E200FBC5D9 /* Constant.swift */; };
@@ -52,8 +50,16 @@
 		B9CAC05A2863254500840A2D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CAC04D2863254400840A2D /* Roboto-Bold.ttf */; };
 		B9CAC05B2863254500840A2D /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CAC04E2863254400840A2D /* Roboto-Thin.ttf */; };
 		B9CAC05C2863254500840A2D /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9CAC04F2863254400840A2D /* Roboto-Black.ttf */; };
+		EA2B8F1B2910638200A8E9BF /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B8F1A2910638100A8E9BF /* CustomPageViewController.swift */; };
+		EA2B8F1D2910638A00A8E9BF /* DemoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B8F1C2910638A00A8E9BF /* DemoPageViewController.swift */; };
 		EA3D6E2A26B7F90D007B1307 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D6E2926B7F90D007B1307 /* WebService.swift */; };
 		EA3D6E2D26B7FE95007B1307 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */; };
+		EA412E24291FC4F3003302EF /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA412E23291FC4F3003302EF /* Enums.swift */; };
+		EA412E26291FD16B003302EF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA412E25291FD16B003302EF /* SettingsViewController.swift */; };
+		EA412E29291FD427003302EF /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA412E27291FD427003302EF /* SettingsTableViewCell.swift */; };
+		EA412E2A291FD427003302EF /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA412E28291FD427003302EF /* SettingsTableViewCell.xib */; };
+		EA51258F292900CB00C70D6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA512591292900CB00C70D6A /* Localizable.strings */; };
+		EA5125942929095500C70D6A /* SettingsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5125932929095500C70D6A /* SettingsItems.swift */; };
 		EA661F882873670100EDF165 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA661F872873670100EDF165 /* TasksViewModel.swift */; };
 		EA661F8A28736AB500EDF165 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA661F8928736AB500EDF165 /* ProfileViewModel.swift */; };
 		EA8724992668E73900D3722F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8724982668E73900D3722F /* LoginViewController.swift */; };
@@ -80,8 +86,6 @@
 		B91A187826B818BE00D9526B /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskList.swift; path = ../Utils/TaskList.swift; sourceTree = "<group>"; };
 		B93E874F2666886600B6B1CC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B99B3D4726B945D000FBC5D9 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
-		B99B3D4B26B9462F00FBC5D9 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
-		B99B3D4D26B9466800FBC5D9 /* DemoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPageViewController.swift; sourceTree = "<group>"; };
 		B99B3D4F26B9619100FBC5D9 /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		B99B3D5126B9656A00FBC5D9 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		B99B3D5326B965E200FBC5D9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -119,8 +123,17 @@
 		B9CAC04D2863254400840A2D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		B9CAC04E2863254400840A2D /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		B9CAC04F2863254400840A2D /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		EA2B8F1A2910638100A8E9BF /* CustomPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPageViewController.swift; path = ../../../../../../.Trash/CustomPageViewController.swift; sourceTree = "<group>"; };
+		EA2B8F1C2910638A00A8E9BF /* DemoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoPageViewController.swift; path = ../../../../../../.Trash/DemoPageViewController.swift; sourceTree = "<group>"; };
 		EA3D6E2926B7F90D007B1307 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		EA412E23291FC4F3003302EF /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		EA412E25291FD16B003302EF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EA412E27291FD427003302EF /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		EA412E28291FD427003302EF /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		EA512590292900CB00C70D6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA512592292900DE00C70D6A /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA5125932929095500C70D6A /* SettingsItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItems.swift; sourceTree = "<group>"; };
 		EA661F872873670100EDF165 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 		EA661F8928736AB500EDF165 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		EA8724982668E73900D3722F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +192,8 @@
 				B9A8DB49266907DC00BE72DA /* ExtensionsVC.swift */,
 				B91A187626B817A800D9526B /* ImagePicker+Ext.swift */,
 				B99B3D5326B965E200FBC5D9 /* Constant.swift */,
+				EA412E23291FC4F3003302EF /* Enums.swift */,
+				EA512591292900CB00C70D6A /* Localizable.strings */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -260,6 +275,7 @@
 			children = (
 				EA3D6E2C26B7FE95007B1307 /* UserInfo.swift */,
 				B91A187826B818BE00D9526B /* TaskList.swift */,
+				EA5125932929095500C70D6A /* SettingsItems.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +333,8 @@
 			children = (
 				EAC4054E2666512200BA0D81 /* TaskTableViewCell.swift */,
 				EAC4054F2666512200BA0D81 /* TaskTableViewCell.xib */,
+				EA412E27291FD427003302EF /* SettingsTableViewCell.swift */,
+				EA412E28291FD427003302EF /* SettingsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -328,10 +346,11 @@
 				EAC4054826664E9C00BA0D81 /* TasksViewController.swift */,
 				EAC4054A26664EAE00BA0D81 /* IdeasViewController.swift */,
 				EAC4054C26664EBB00BA0D81 /* ProfileViewController.swift */,
+				EA2B8F1C2910638A00A8E9BF /* DemoPageViewController.swift */,
+				EA2B8F1A2910638100A8E9BF /* CustomPageViewController.swift */,
 				B99B3D4726B945D000FBC5D9 /* WalkthroughViewController.swift */,
-				B99B3D4B26B9462F00FBC5D9 /* CustomPageViewController.swift */,
-				B99B3D4D26B9466800FBC5D9 /* DemoPageViewController.swift */,
 				B99B3D5126B9656A00FBC5D9 /* TermsViewController.swift */,
+				EA412E25291FD16B003302EF /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -390,6 +409,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = EAC4052626664D6600BA0D81;
 			productRefGroup = EAC4053026664D6600BA0D81 /* Products */;
@@ -438,12 +458,14 @@
 				B9CAC0322863250C00840A2D /* Poppins-BoldItalic.ttf in Resources */,
 				B9CAC03E2863250C00840A2D /* Poppins-Thin.ttf in Resources */,
 				EAC4053C26664D6800BA0D81 /* Assets.xcassets in Resources */,
+				EA51258F292900CB00C70D6A /* Localizable.strings in Resources */,
 				B9CAC05A2863254500840A2D /* Roboto-Bold.ttf in Resources */,
 				B9CAC0592863254500840A2D /* Roboto-BlackItalic.ttf in Resources */,
 				B9CAC03F2863250C00840A2D /* Poppins-SemiBold.ttf in Resources */,
 				B9CAC05C2863254500840A2D /* Roboto-Black.ttf in Resources */,
 				B9CAC03A2863250C00840A2D /* Poppins-Regular.ttf in Resources */,
 				EAC4053A26664D6600BA0D81 /* Main.storyboard in Resources */,
+				EA412E2A291FD427003302EF /* SettingsTableViewCell.xib in Resources */,
 				B9CAC0502863254500840A2D /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,20 +527,24 @@
 				B9A8DB4A266907DC00BE72DA /* ExtensionsVC.swift in Sources */,
 				B9A04A1E26BDB2E0003C4540 /* ResetPasswordViewController.swift in Sources */,
 				B91A187926B818BE00D9526B /* TaskList.swift in Sources */,
-				B99B3D4C26B9462F00FBC5D9 /* CustomPageViewController.swift in Sources */,
+				EA412E26291FD16B003302EF /* SettingsViewController.swift in Sources */,
 				EA3D6E2A26B7F90D007B1307 /* WebService.swift in Sources */,
 				EA8724992668E73900D3722F /* LoginViewController.swift in Sources */,
 				B99B3D5226B9656A00FBC5D9 /* TermsViewController.swift in Sources */,
 				B99B3D4826B945D000FBC5D9 /* WalkthroughViewController.swift in Sources */,
 				EA3D6E2D26B7FE95007B1307 /* UserInfo.swift in Sources */,
 				EAC4053326664D6600BA0D81 /* AppDelegate.swift in Sources */,
+				EA5125942929095500C70D6A /* SettingsItems.swift in Sources */,
+				EA2B8F1B2910638200A8E9BF /* CustomPageViewController.swift in Sources */,
 				EA661F8A28736AB500EDF165 /* ProfileViewModel.swift in Sources */,
 				B91A187526B8107400D9526B /* ForgotPasswordViewController.swift in Sources */,
+				EA412E29291FD427003302EF /* SettingsTableViewCell.swift in Sources */,
 				B99B3D5426B965E200FBC5D9 /* Constant.swift in Sources */,
 				EA87249B2668E79300D3722F /* SignUpViewController.swift in Sources */,
 				EAC4054B26664EAE00BA0D81 /* IdeasViewController.swift in Sources */,
-				B99B3D4E26B9466800FBC5D9 /* DemoPageViewController.swift in Sources */,
 				EAC4053526664D6600BA0D81 /* SceneDelegate.swift in Sources */,
+				EA2B8F1D2910638A00A8E9BF /* DemoPageViewController.swift in Sources */,
+				EA412E24291FC4F3003302EF /* Enums.swift in Sources */,
 				EA661F882873670100EDF165 /* TasksViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +552,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EA512591292900CB00C70D6A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA512590292900CB00C70D6A /* en */,
+				EA512592292900DE00C70D6A /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		EAC4053826664D6600BA0D81 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -549,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -610,6 +646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
